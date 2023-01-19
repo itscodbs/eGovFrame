@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+
+h1, h3{
+	font-family : "돋움";
+	color : purple;
+}
+
+p{
+	font-size: 12px;
+	line-height : 20px;
+	margin : 10px 20px;
+	border : 1px solid #ccc;
+	padding : 5px;
+} 

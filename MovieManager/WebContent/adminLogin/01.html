@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>태인이네영화관-로그인페이지</title>
+<title>logIn</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style>
+#title{
+	text-align:center;
+	font-size:25px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+	<br><br><br><br>
+	<div class="well well-lg">
+			<div id="title" class="alert alert-info">
+				<strong>관리자 페이지 - 로그인</strong>
+			</div>
+			<form action="../adminMain/01.html" class="form-horizontal">
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="id">ID:</label>
+					<div class="col-sm-10">
+					<input type="text" class="form-control" id="id" placeholder="Enter Id" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="pwd">Password:</label>
+					<div class="col-sm-10">
+					<input type="password" class="form-control" id="pwd" placeholder="Enter password" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<div class="checkbox">
+						<label><input type="checkbox">아이디 저장</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-10 col-sm-2">
+					<button type="button" class="btn btn-default"
+					onclick="location.href='회원가입페이지.html'">회원가입</button>
+					<button type="submit" class="btn btn-default">로그인</button>
+					</div>
+				</div>
+			</form>
+	</div>
+</div>
+</body>
+</html>

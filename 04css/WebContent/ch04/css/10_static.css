@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+
+div{
+	width : 200px;
+	height : auto;
+	margin : 10px 5px;
+	padding : 5px;
+	border : 1px solid black;
+}
+
+#cont1{
+	position : static; /* 다른 요소와 겹치지 않게 배치 */	
+	background : lightyellow;
+}
+
+#cont2{
+	position : static;
+	background : lightgreen;
+}
+
+#cont3{
+	position : static;
+	background : lightblue;
+}

@@ -1,0 +1,64 @@
+<ul>
+	<div class = "test"></div>
+	<li id="foo1">foo</li>
+	<li id="bar1" class="test">bar</li>
+	<li id="baz1">baz</li>
+	<div class = "test"></div>
+</ul>
+<div id="last"></div>
+
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+$(function(){
+	// [.index() with No Arguments] : parameter가 없는
+	// .index() gives the zero-based index of #ffo1 within its parent.
+	// Since #foo1 is the second child of its parent, index() returns 1.
+	var foo = $("#foo1");
+	console.log("Index : " + foo.index()); //1
+	
+	var listItem = $("li");
+	// This implicitly calls .first()
+	console.log("Index : "  + listItem.index()); //1
+	console.log("Index : "  + listItem.first().index()); //1
+	
+	var div = $("div");
+	// This implicitly calls .first()
+	console.log("Index : "  + div.index()); //0
+	console.log("Index : "  + div.first().index()); //0
+		
+	// [.index() with a String Argument]
+	// First, jQuery will umplicitly call .first() on the original jQuery object.
+	// The second point to consider is that jQuery os querying the entire DOM
+	// using the passed in string selector and checking the index within that newly queried jQuery object.
+	var foo = $("li");
+	// This implicitly calls .first()
+	console.log("Index : " + foo.index("li")); // 0
+	console.log("Index : " + foo.first().index("li")); // 0
+	
+	var baz = $("#baz1");
+	console.log("Index : "  + baz.index("li")) //2
+		
+	var listItem = $("#bar1");
+	console.log("Index : " + listItem.index(".test")); // 1
+	
+	var div = $("#last");
+	console.log("index : " + div.index("div")); //2
+	
+	// [.index() with a jQuery Object Argument]
+	// In this case, the first element of the jQuery object that is passed into
+	// .index() is being checked against all of the elements in the original
+	// jQuery object. The original jQeury object, on the left side of .index()
+	// is array-like and is searched from index 0 through length -1 for the
+	// first element of the argument jQuery object.
+	var foo = $("li");
+	var baz = $("#baz1");
+	console.log("index " + foo.index(baz)); //2
+	
+	var tests = $(".test");
+	var bar = $("#baz1");
+	// implicitly calls .first() on the argument
+	console.log("index : " + tests.index(bar));  // 1
+	console.log("index : " + tests.index(bar.first())); // 1
+});
+
+</script>

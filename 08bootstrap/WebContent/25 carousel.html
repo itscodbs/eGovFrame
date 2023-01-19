@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Carousel</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<style>
+	.carousel-inner > .item > img.
+	.carousel-inner > .item > a > img {
+		width : 70%;
+		margin : auto;
+	}
+</style>
+</head>
+<body>
+
+<div class="container">
+	<br>
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<!-- indicators -->
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2""></li>
+	</ol>
+	
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner">
+		<div class="item active">
+			<img src="img/a.jpg" alt="a" width="460" height="345">
+		</div>
+		
+		<div class="item">
+			<img src="img/b.jpg" alt="b" width="460" height="345">
+		</div>
+		
+		<div class="item">
+			<img src="img/c.jpg" alt="c" width="460" height="345">
+			<div class="carousel-caption">
+				<h3>녹색</h3>
+				<p>강아지풀</p>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Left and right controls -->
+	<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left"></span> 
+	</a>
+	<a class="right carousel-control" href="#myCarousel" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right"></span> 
+	</a>
+	</div>
+</div>
+</body>
+</html>
+<!--
+The outermost <div> :
+Carousels require the use of an id (in this case id = "myCarousel")
+for carousel controls to function properly.
+The class = "carousel" specifies that this <div> contains a carousel.
+The .slide class adds a CSS transition and animation effect,
+which makes the items slide when showing a new item.
+Omit this class if you do not want this effect.
+The data-ride = "carousel" attribute tells Bootstrap to begin animating the carousel
+immediately when the page loads.
+The "Indicators" part :
+The indicators are the little dots at the bottom of each slide
+(which indicates how many slides there is in the carousel, and which slide the user are currently viewing).
+The indicators are specified in an ordered list with class .carousel-indicators.
+The data-target attribute points to the id of the carousel.
+The data-slide-to attribute specifies which slide to go to, when clicking on the specific dot.
+The "Wrapper for slides" part :
+The slides are specified in a <div> with class .carousel-inner.
+The content of each slide is defined in a <div> with class .item. This can be text or images.
+The .active class needs to be added to one of the slides. Otherwise, the carousel will not be visible.
+The "Left and right controls" part :
+This code adds "left" and "right" buttons that allows the user
+to go back and forth between the slides manually.
+The data-slide attribute accepts the keywords "prev" or "next",
+which alters the slide position relative to its current position.
+-->

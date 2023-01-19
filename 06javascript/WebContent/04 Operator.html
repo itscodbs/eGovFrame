@@ -1,0 +1,81 @@
+<script>
+// Concatenation
+var foo = "hello"; 
+var bar = "world";
+console.log(foo + " " + bar); // "hello world"
+
+// Multiplication and division
+2*3;
+2/3;
+
+// Incrementing and decrementing
+// The pre-increment operator increments the operand before any futher processing.
+var i = 1;
+console.log(++i); // 2
+console.log(i); // 2
+
+// The post-increment operator increments the operand after processing it.
+var i = 1;
+console.log(i++); // 1
+console.log(i); // 2
+
+// [Operations on Numbers & Strings]
+// Adition vs Concatenation
+var foo = 1;
+var bar = "2";
+console.log(foo + bar); //12
+
+// Coercing a string to act as a number.
+var foo = 1;
+var bar = "2";
+console.log(foo + Number(bar)); //3
+
+// Forcing a string to act as a number (using the unary plus operator).
+console.log(foo + bar); //3
+
+// [Logiccal ANd and OR Operators]
+var foo = 1;
+var bar = 0;
+var baz = 2;
+
+// returns 1, which is true
+console.log(foo || bar);
+
+// returns 1, which is true
+console.log(bar || foo);
+
+// returns 0, which is false
+console.log(foo && bar);
+
+// returns 2, which is true
+console.log(foo && baz);
+
+// returns 1, which is true
+console.log(baz && foo);
+
+// Do something with foo if foo is truthy.
+// foo && doSomething(foo); // foo가 true이면 foo, false이면 dosomething
+
+// Set bar to baz if baz is truthy.
+var bar = baz || createBar();
+
+//[Comparison Operators]
+var foo = 1;
+var bar = 0;
+var baz = "1";
+var bim = 2;
+
+// equivalent
+console.log(foo == bar); // false
+console.log(foo != bar); // true
+console.log(foo == baz); // true but note that the types are different
+
+// identical
+console.log(foo === baz);  // false
+console.log(foo !== baz); // true
+console.log(foo === parseInt(baz)); // true
+
+console.log(foo > bim); // false
+console.log(foo > baz); // true
+console.log(foo <= baz); // true
+</script>

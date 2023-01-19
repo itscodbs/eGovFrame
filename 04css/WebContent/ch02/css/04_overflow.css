@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+.over1{
+	text-overflow : clip; /* 잘라내기 */
+}
+
+.over2{
+	text-overflow : ellipsis; /* ..생략 */
+}
+
+p{
+	font-size : 1.5em;
+	white-spcae : nowrap;
+	border : 1px solid black;
+	width : 400px;
+	padding : 10px;
+	margin-bottom : 10px;
+	margin-right : 10px;
+	overflow : hidden;  /* 영역을 초과하는 내용은 표시하지 않는다. */
+}

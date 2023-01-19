@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+
+.multicol{
+	columns : auto 3;
+	column-rule : 1em dotted black;
+}
+
+.subtitle{
+	column-span : all;
+	background : skyblue;
+	padding : 5px;
+	border : 2px double blue;
+} 

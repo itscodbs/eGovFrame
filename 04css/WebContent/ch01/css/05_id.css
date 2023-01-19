@@ -1,0 +1,36 @@
+@CHARSET "UTF-8";
+
+#title {
+	float : left;
+	margin-left : 10px;
+	width : 200px;
+	height : 110px;
+	background-color : orange;
+	border : 1px solid black;
+	text-align : center;	
+}
+
+#pic1{
+	float : left;
+	margin-left : 10px;
+	width : 200px;
+	height : 110px;
+}
+
+#pic2{
+	clear : both; /* 이전 요소와 줄바꿔서 표시 */
+	float : left;
+	margin-left : 10px;
+	margin-top : 20px;
+	width : 200px;
+	height : 120px;	
+}
+
+#pic3{
+	clear : none; /* 이전 요소와 연결해서 표시 */
+	float : left;
+	margin-left : 10px;
+	margin-top : 20px;
+	width : 200px;
+	height : 120px;	
+}

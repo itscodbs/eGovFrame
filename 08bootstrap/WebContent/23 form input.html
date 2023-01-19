@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Form Input</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+	<h2>Form control : input</h2>
+	<form>
+		<div class="form-group">
+			<label for="usr">Name : </label>
+			<input type="text" class="form-control" id="usr">
+		</div>
+		<div class="form-group">
+			<label for="pwd">Password : </label>
+			<input type="password" class="form-control" id="pwd">
+		</div>
+	</form>
+	
+	<h2>Form control : textarea</h2>
+	<form>
+		<div class="form-group">
+			<label for="comment">Comment : </label>
+			<textarea class="form-control" row="5" id="comment"></textarea>
+		</div>
+	</form>
+	
+	<h2>Form control : checkbox</h2>
+	<form>
+		<div class="checkbox">
+			<label><input type="checkbox" value="">Option 1</label>
+		</div>
+		<div class="checkbox">
+			<label><input type="checkbox" value="">Option 2</label>
+		</div>
+		<div class="checkbox disabled">
+			<label><input type="checkbox" value="">Option 3</label>
+		</div>
+	</form>
+		
+	<h2>Form control : inline checkbox</h2>
+	<form>
+		<label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+		<label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
+		<label class="checkbox-inline"><input type="checkbox" value="">Option 3</label>
+	</form>
+	
+	<h2>Form control : radio buttons</h2>
+	<form>
+		<div class="radio">
+			<label><input type="radio" name="optradio">Option 1</label>			
+		</div>
+		<div class="radio">
+			<label><input type="radio" name="optradio">Option 2</label>
+		</div>
+		<div class="radio disabled">
+			<label><input type="radio" name="optradio disabled">Option 3</label>
+		</div>
+	</form>
+	
+	<h2>Form control : inline radio buttons</h2>
+	<form>
+		<label class="radio-inline"><input class="radio" name="optradio">Option 1</label>
+		<label class="radio-inline"><input class="radio" name="optradio">Option 2</label>
+		<label class="radio-inline"><input class="radio" name="optradio">Option 3</label>		
+	</form>
+	
+	<h2>Form control : select</h2>
+	<form>
+		<div class="form-group">
+			<label for="sel1">Select list (select one) : </label>
+			<select class="form-control" id="sell">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+			</select>
+			<br>
+			<label for="sel2">Multiple select list</label>
+			<select multiple class="form-control" id="sel2">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+		</div>
+	</form>
+	
+	<h2>Static control</h2>
+	<form class="form-horizontal">
+		<div class="form-group">
+			<label class="control-label col-sm-2">Email : </label>
+			<div class = "col-sm-10">
+				<p class="form-control-static">someone#example.com</p>
+			</div>
+		</div>
+	</form>
+
+	<h2>Horizontal form : control states</h2>
+	<form class="form-horizontal">
+		<div class= "form-group">
+			<label class="col-sm-2 control-label">Focused</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="focusedInput" type="text" value="Click to focus...">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="inputPassword" class="col-sm-2 control-label">Disabled</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="inputPassword" type="text" placeholder="Disabled input here..." diabled>
+			</div>
+		</div>
+		<fieldset disabled>
+			<div class="form-group">
+				<label for="disabledTextInput" class="col-sm-2 control-label">Fieldset disaled</label>
+				<div class="col-sm-10">
+					<input type="text" id="disabled">
+					</div>
+				</div></fieldset>
+	</form>
+</div>
+</body>
+</html>
+<!--
+Bootstrap supports the following form controls : 
+input
+textarea
+checkbox
+radio
+select
+Input Focus - The outline of the input is removed and a box-shadow is applied on focus
+Disabled Inputs - Add a disabled attribute to disabled an input field
+Disabled fieldSets - Add a disabled attribute to a fieldSet to disable all controls within
+ReadOnly Inputs - Add a read only attribute to an input to  prevent user input
+VALIDATION STATES - Bootstrap includes validation styles for error, warning, and success messages.
+					To use, add .has-warning, .has-error, or .has-success to the parent element
+Icons - You can add feedback icons with the .has-feedback class and an icon
+HIDDEN LABLES - Add a .sr-only class on non-visible labels
+ -->

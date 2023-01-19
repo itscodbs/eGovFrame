@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+
+/* 첫번째 항목의 스타일 */
+ul.navi li : first-child{
+	border-top-left-radius : .5em; /* 왼쪽 상단 코너를 부드럽게 */
+	border-bottom-left-radius : .5em; /* 왼쪽 하단 코너를 부드럽게 */
+}
+
+/* 마지막 항목의 스타일 */
+ul.navi li : last-child{
+	border-top-right-radius : .5em; /* 오른쪽 상단 코너를 부드럽게 */
+	border-bottom-right-radius : .5em; /* 오른쪽 하단 코너를 부드럽게 */
+}

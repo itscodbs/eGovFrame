@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+
+#ex div{
+	width : 100px;
+	height : 100px;
+	background-color : red;
+	border-radius : 0px;
+	
+	transition-property : background-color, border-radius;
+	transition-duration : 1s;
+}
+
+#ex:hover div{
+	background-color : blue;
+	border-radius : 50px;
+}
+
+
+	

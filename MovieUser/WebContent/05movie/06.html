@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>태인이네 영화관</title>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../res/css/common.css">
+<script type="text/javascript" src="../res/js/common.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>	
+	<!-- sidebar -->
+	<div class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-right"  style="display:none; right:0" id="mySidebar">
+		<button class="w3-bar-item w3-button w3-large" onclick="w3_close()"> &times;</button>
+		<a href="#" class="w3-bar-item w3-button"><i class="fa fa-fw fa-home"></i><strong>태인이네영화관</strong></a><hr>
+	  
+		<button class="w3-button w3-block w3-left-align w3-indigo" onclick="myAccFunc()">> 영화관소개</button>
+		<div id="demoAcc" class="w3-hide w3-white w3-card">
+			<a href="../01home/01.html" class="w3-bar-item w3-button">· 영화관소개</a>
+			<a href="../01home/02.html" class="w3-bar-item w3-button">· 좌석배치도</a>
+			<a href="../01home/03.html" class="w3-bar-item w3-button">· 주차장안내</a>
+	    </div>
+	
+		<button class="w3-button w3-block w3-left-align w3-indigo" onclick="myAccFunc2()">> 영화정보</button>
+		<div id="demoAcc2" class="w3-hide w3-white w3-card">
+			<a href="../05movie/01.html" class="w3-bar-item w3-button">· 현재상영작</a>
+			<a href="../05movie/02.html" class="w3-bar-item w3-button">· 상영시간표</a>
+			<a href="../05movie/03.html" class="w3-bar-item w3-button">· 상영예정작</a>
+		</div>
+	  
+		<button class="w3-button w3-block w3-left-align w3-indigo" onclick="myAccFunc3()">> 영화예매</button>
+		<div id="demoAcc3" class="w3-hide w3-white w3-card">
+			<a href="../03reservation/01.html" class="w3-bar-item w3-button">· 예매하기</a>
+			<a href="../03reservation/02.html" class="w3-bar-item w3-button">· 예매내역</a>
+			<a href="../03reservation/03.html" class="w3-bar-item w3-button">· 위시리스트</a>
+		</div>
+	
+		<button class="w3-button w3-block w3-left-align w3-indigo" onclick="myAccFunc4()">> 리뷰관리</button>
+		<div id="demoAcc4" class="w3-hide w3-white w3-card">
+			<a href="../04review/01.html" class="w3-bar-item w3-button">· 리뷰조회</a>
+			<a href="../04review/02.html" class="w3-bar-item w3-button">· 리뷰등록</a>
+			<a href="../04review/03.html" class="w3-bar-item w3-button">· 리뷰수정</a>
+		</div>
+		
+		<div>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<p><center>Copyrightⓒ 2018 By Team Cinema.Co.Ltd. All right reserved.</center></p>
+		</div>
+	</div>
+	
+	<!-- logo image -->
+	<div class="w3-container"><br>
+	<a class = "navbar-img-logo" href = "../main.html"><img src = "../res/img/logo.png" width="150px"></a>
+	</div>
+	
+	<!-- top menu -->
+	<div class="w3-display-topright w3-text-black">
+    <br>
+    <p><a href = "../02users/03.html"><i class="fa fa-address-card-o"></i> 마이페이지</a>
+	   <a href = "../02users/02.html"><i class="fa fa-user"></i> 로그인</a>
+	   <a href = "../02users/01.html"><i class="fa fa-check-square-o"></i> 회원가입　　　　　</a></p>
+	</div>
+    
+    <button class="w3-button w3-white w3-xlarge w3-indigo w3-display-topright" onclick="w3_open()">&#9776;</button>
+    <br><br>
+     
+    <!-- navbar menu -->
+    <div class="container" style="width:100%">
+	<div class="w3-bar w3-indigo w3-padding-small w3-medium" style="max-width:100%;" >
+		<a href="../main.html" class="w3-bar-item w3-button w3-text-white">
+			<i class="fa fa-fw fa-home"></i>
+			<strong>태인이네영화관</strong>
+		</a>
+	    
+		<div class="w3-dropdown-hover">
+			<button class="w3-button"><a href="../01home/01.html" class="w3-text-white"/>영화관소개</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="../01home/01.html" class="w3-bar-item w3-button">영화관소개</a>
+				<a href="../01home/02.html" class="w3-bar-item w3-button">좌석배치도</a>
+				<a href="../01home/03.html" class="w3-bar-item w3-button">주차장안내</a>
+			</div>
+		</div>
+	    
+		<div class="w3-dropdown-hover">
+			<button class="w3-button"><a href="../05movie/01.html" class="w3-text-white"/>영화정보</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="../05movie/01.html" class="w3-bar-item w3-button">현재상영작</a>
+				<a href="../05movie/02.html" class="w3-bar-item w3-button">상영시간표</a>
+				<a href="../05movie/03.html" class="w3-bar-item w3-button">상영예정작</a>
+			</div>
+		</div>
+	    
+		<div class="w3-dropdown-hover">
+			<button class="w3-button"><a href="../03reservation/01.html" class="w3-text-white"/>영화관예매</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="../03reservation/01.html" class="w3-bar-item w3-button">예매하기</a>
+				<a href="../03reservation/02.html" class="w3-bar-item w3-button">예매내역</a>
+				<a href="../03reservation/03.html" class="w3-bar-item w3-button">위시리스트</a>
+			</div>
+		</div>
+	
+		<div class="w3-dropdown-hover">
+			<button class="w3-button"><a href="../04review/01.html" class="w3-text-white"/>리뷰관리</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="../04review/01.html" class="w3-bar-item w3-button">리뷰조회</a>
+				<a href="../04review/02.html" class="w3-bar-item w3-button">리뷰등록</a>
+				<a href="../04review/03.html" class="w3-bar-item w3-button">리뷰수정</a>
+			</div>
+		</div>
+		<a href="#" class="w3-bar-item w3-button w3-small w3-light-gray w3-right"><i class="glyphicon glyphicon-search"></i></a>
+        <input type="text" class="w3-bar-item w3-input w3-small w3-white w3-right w3-text-gray" placeholder="검색할 내용을 입력하세요.">
+	</div>
+	</div><br>
+
+	<!-- side menu -->
+	<div class="container" style="width:100%">
+    <br><br>
+    	<ul class="w3-ul w3-left" style="width:200px"><br>
+		<p class="w3-text-indigo w3-large"><b>　영화정보</b></p>
+			<li class="active">
+				<a href="../05movie/01.html">현재상영작 <i class="icon fa fa-angle-right" aria-hidden="true"></i></a>
+			</li>
+			<li class="">
+				<a href="../05movie/02.html">상영시간표	<i class="icon fa fa-angle-right" aria-hidden="true"></i></a>
+			</li>
+			<li class="">
+				<a href="../05movie/03.html">상영예정작 <i class="icon fa fa-angle-right" aria-hidden="true"></i></a>
+			</li>
+		</ul>
+    
+    <!-- 05movie content-->    
+    <h3><p><b> 　l 　영화 정보</b></p></h3>
+	
+	<div class="container" style="width:1300px">
+	<div class="w3-row-padding ">
+	<button type="button" class="btn btn-default" value="목록" ><a href="../05movie/01.html">목록</a></button>
+	<hr><br><br>
+		<div class="w3-col l3 m6 w3-margin-bottom" style="width:400px">
+			<img src="../res/img/02.jpg" alt="The Spy Gone North , 2018" style="width:380px">
+		</div>
+		<div class="w3-col l3 m6 " style="width:800px"> 
+			<p><h3><b>공작 　</b><small>The Spy Gone North , 2018</small></h3></p><br>
+		
+		<div class="panel panel-default faq-panel" >
+		<div class="panel-heading" role="tab" id="faq-item-113">
+			<h4 class="panel-title">
+				<a role="button" data-toggle="collapse"  href="#faq-item-113-body">
+				<center><b>영화 정보 및 예매</b></center></a>
+			</h4>
+		</div>
+			
+			<div class="panel-body" >
+				<p>
+				<strong>개요</strong>　드라마  | 한국  | 137분  | 2018.08.08  <br>
+				<strong>감독</strong>　윤종빈<br>
+				<strong>출연</strong>　황정민(흑금성(박석영)), 이성민(리명운), 조진웅(최학성)<br><br>
+				<strong>북으로 간 스파이, 암호명 흑금성</strong>
+				<p>	1993년, 북한 핵 개발을 둘러싸고 한반도의 위기가 고조된다.<br>
+					 정보사 소령 출신으로 안기부에 스카우트된 박석영(황정민)은 ‘흑금성’이라는 암호명으로 <br>
+					 북핵의 실체를 캐기 위해 북의 고위층 내부로 잠입하라는 지령을 받는다. <br>
+					 안기부 해외실장 최학성(조진웅)과 대통령 외에는 가족조차도 그의 실체를 모르는 가운데 <br>
+					 대북사업가로 위장해 베이징 주재 북 고위간부 리명운(이성민)에게 접근한 흑금성.<br>
+					 그는 수 년에 걸친 공작 끝에, 리명운과 두터운 신의를 쌓고 <br>
+					 그를 통해서, 북한 권력층의 신뢰를 얻는데 성공한다.<br>
+					 그러나, 1997년. 남의 대선 직전에 흑금성은 남과 북의 수뇌부 사이 은밀한 거래를 감지한다.<br>
+					 조국을 위해 굳은 신념으로 모든 것을 걸고 공작을 수행했던 그는 걷잡을 수 없는 갈등에 휩싸이는데…<br><br>
+				</p>
+			</div>
+			</div>
+			<br>
+			<button class="w3-button w3-indigo w3-block w3-right"><b>예매하기</b></button>
+		</div>
+		</div>
+		</div><br><br><br>
+		<hr><br>
+		<div class="container" >
+		<h4><p><b> 　| 　영화 리뷰 　| </b></p></h4>
+		
+		<table class="w3-table w3-bordered"  style="width:90%">
+		<colgroup>
+			<col>
+			<col width="100">
+			<col width="100">
+			<col width="100">
+		</colgroup>
+		
+		<thead> 
+			<tr class="w3-light-gray">
+				<th class="w3-center" scope="col">제목</th>
+				<th class="w3-center" scope="col">작성자</th>
+				<th class="w3-center" scope="col">날짜</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+		<tr class="w3-hover-light-blue">
+			<td class="title">
+				<a role="button" data-toggle="collapse"  href="#faq-item-112-body" >
+				<input type="checkbox"/>　호불호가 갈릴만한 영화, 하지만 나는 호 </a>			
+				<div id="faq-item-112-body" class="panel-collapse collapse" role="tabpanel" >
+				<div class="panel-body">
+					<p><br>바로 옆사람은 화장실을 들락날락 거렸고, 나는 마지막에 울컥했다. <br>
+						-<br>
+						실화를 기반으로 하는 영화를 좋아하고 황정민과 조진웅을 좋아한다.
+						정말 영화가 최악이지 않는 이상 호였을 것 같긴하지만 전체적인 스토리도 맘에 들었다.
+						특별한 액션은 없이 배우들의 연기력과 스토리로 두시간가량의 러닝타임을 끌고 나가지만 전혀 지루함 없이 집중하여 볼수 있었다.<br> 
+						-<br>
+						말이 되나 싶은 공작원의 존재와 그의 임무들, 흑금성 사건에 대한 지식이 전혀 없는 상태로 봤기에 이것이 실화라는게 실화인가 싶었다.  
+						물론 어느정도 영화적 요소를 가미했겠지만 베이스가 되는 이야기가 실존했다는 것이 놀라웠다. <br>
+						-<br>
+						남과 북은 적대시 될 수도 있는 관계지만 그 뿌리는 같기때문에 맘껏 미워하기도 힘든 사람들이다.
+						우리의 의지와 상관없이 나눠졌고 우리의 의지와 상관없이 나눠져있기 때문일것이다.
+						서로를 믿지 못하지만 생각하는것과 이루고자하는것이 비슷하기에 극 중 박석영과 리명훈이 동지가 될수 있었던 것이 아닐까.  
+						물론 최학성과 정무택같은 인물들도 많이 존재하지만. <br>
+						-<br>
+						정치적 성향이 강하다고 하지만 의식을 크게 하지않으면 느껴지지 않는다, 하지만 어쩌면 그래서 지금 개봉할수 있었던거 아닐까싶기도하다. <br></p>
+				</div>
+				</div>
+			</td>
+			<td class="name">dfew**** </td>
+			<td class="date">2018.08.15</td>
+		</tr>
+		<tr class="w3-hover-light-blue" >
+			<td class="title">
+				<a role="button" data-toggle="collapse" href="#faq-item-113-body" >
+				<input type="checkbox"/>　공작</a>
+				<div id="faq-item-113-body" class="panel-collapse collapse" role="tabpanel" >
+				<div class="panel-body">
+					<p><br>같은 나라 다른 국가<br>
+							1997년 "우리가 남이가?"로 탄생한 정권 시절<br>
+							우리 위대한 교육의 도시가 낳은 리회창 선배께서<br>
+							"우리가 남이유? 적의 적은 동무쥬? 총 좀 싸줘유"<br>
+							하시다가 개쪽을 당하신 사건.<br>
+							하지만 대중은 개돼지라 다음에 또 나오신 자랑스런 선배님!<br>
+							존경합니다!<br></p>
+				</div>
+				</div>
+			</td>
+			<td class="name">qcvf**** </td>
+			<td class="date">2018.08.14</td>
+		</tr>
+		<tr class="w3-hover-light-blue">
+			<td class="title">
+				<a role="button" data-toggle="collapse" href="#faq-item-114-body" >
+				<input type="checkbox"/>　윤종빈,[공작(The Spy Gone North)],한, 2018</a>
+				<div id="faq-item-114-body" class="panel-collapse collapse" role="tabpanel" >
+				<div class="panel-body">
+					<p><br>*시나리오<br>
+							시나리오를 아주 잘 썼다.군더더기 없는 대사와 적절한 위트까지.작은 소품들을 저렇게 잘 쓰는구나 감탄할 정도였다.
+							시나리오를 공부하는 사람은 꼭 필사를 할 정도일 것이다.<br>
+		
+							* 캐릭터<br>
+													
+							배우들의 연기는 당연히 뛰어나다.이런 영화에서 조연급은 빛을 발하지 못한다.너무 캐릭터들이 강하기 때문에.
+							그런데, 윤종빈 감독이 캐릭터에 좀 더 욕심을 냈으면 좋았을 것 같기도 하고 황정민과 이성민의 대립점인 주지훈이 맡았던 정무택이 저렇게 약하고, 엉뚱하기까지 한가.
+							아무래도 감독은 주지훈에게 게리올드만 정도의 캐릭터를 요구했던 것 같은데 슬퍼렇게 날이 선 캐릭터는 어땠을까.
+							주지훈 관련 에피소드 하나쯤은 보여줬어도 될 것 같고주지훈의 캐릭터가 너부 합이 안 맞고 붙지 못한다.<br>												
+							
+							*<br>							
+							그런데, 한국의 상황에만 너무 집중하다보니 그때 북한 상황에 대한 설명이 많이 부족했다.
+							왜 그들이 외화벌이를 그렇게 적극적으로 해야 했으며 북은 왜 그렇게 쉽게 돈을 미끼로 접근이 가능했었는지.
+							북한의 대기근 시대를 잘 보여주지 못 한 것 같다. 그 부분이 많이 부족했다.<br></p>
+				</div>
+				</div>
+			</td>
+			<td class="name">nbfg**** </td>
+			<td class="date">2018.08.13</td>
+		</tr>
+		<tr class="w3-hover-light-blue">
+			<td class="title">
+				<a role="button" data-toggle="collapse"  href="#faq-item-115-body" >
+				<input type="checkbox"/>　오랜만에 REVIEW</a>
+				<div id="faq-item-115-body" class="panel-collapse collapse" role="tabpanel" >
+				<div class="panel-body">
+					<p><br>CJ 감성 물씬 + 픽션같은 실화 + 실화같은 픽션이 낫지않나..싶음... + 배우 황정민은 매력있지만 극중 캐릭터가 매력이 없다..
+							점점 나도 영화볼 때 아무생각없이 보는듯.. 기억에 남는게 없네..; 아근데 카메라 기술은 좋았다 찍느라 엄청 공들인티 팍팍남.
+							연기도 정말 어려운 연기였을것 같다. 감정을 숨기면서 세밀하게 눈치를 보며, 100%드러내는 씬이 아무것도 없었으니까..
+							점점 느끼는건데 연기하려면 예민해야하는 것 같다. 촉각이나, 시각이나, 후각이나, 오감이?
+							평소에 그러고살면 죽을지도모르니깤ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ연기할때만이라도.. 최대한 날을 세워서
+							해봐야겠음.. 그리고 뭔가 글로 정리하고 말로 표현할 수 있는게 훨씬 나에게 도움이 되는건데
+							진짜 새삼새삼 귀찮네 ..
+							아무튼. 이성민은 사람이 좋아보인다. 끝.<br></p>
+				</div>
+				</div>
+			</td>
+			<td class="name">xfds****</td>
+			<td class="date">2018.08.12</td>
+			</tr>
+		<tr class="w3-hover-light-blue">
+			<td class="title">
+				<a role="button" data-toggle="collapse"  href="#faq-item-116-body" >
+				<input type="checkbox"/>　흑금성 사건! 실화를 바탕으로 한 영화 공작을 보았습니다.</a>
+				<div id="faq-item-116-body" class="panel-collapse collapse" role="tabpanel" >
+				<div class="panel-body">
+					<p><br>리얼한 북한의 모습이 와닿더라구요 진짜 김정일 분장은.... 최고였습니다.
+							말티즈 강아지도 귀여웠구요
+							배우분들 연기도 안정적이라서 더 좋았던거같아요
+							북한말 쓰는게 참 어려우셨을텐데 크게 거북한 느낌은 안들었어요
+							스파이영화라고 해서 총쏘고 때려부수고 인질극하고 그런걸 기대하시면 안됩니다.
+							액션영화가 아니에요... 간간히 재미있는 장면이 많아요!
+							롤렉스 시계나올때라던지... 춤출때라던지...
+							영화를 보고 실제 이야기와 어떤점이 다른지 확인해보는 시간도 재미있을거같아요<br></p>
+				</div>
+				</div>
+			</td>
+			<td class="name">kjdc****</td>
+			<td class="date">2018.08.11</td>
+		</tr>
+		<tr class="w3-hover-light-blue">
+			<td class="title">
+				<a role="button" data-toggle="collapse"  href="#faq-item-117-body" >
+				<input type="checkbox"/>　공작</a>
+				<div id="faq-item-117-body" class="panel-collapse collapse" role="tabpanel" >
+				<div class="panel-body">
+					<p><br>기억의 망각<br>
+							분명이 들었고 보았다.<br>
+							옛날 여당 정치인들이 선거에 승리하기 위해<br>
+							무슨짓을 했는지...<br>
+							하지만 당시에는 "설마"  "아무리"  "그럴리가"였다.<br>
+							그걸 다시 한번 영화에서 만난다.<br>
+							불편한 진실을 다시한번 우리에게 보여줄때<br>
+							우리는 또 그렇게 분노하고 또한 좌절한다.<br>
+							영화의 의미는 그렇다<br>
+							피상적인것을 도드라지게 하는 힘<br>
+							공작은 그래서 우리 아픈기억이다.<br></p>
+				</div>
+				</div>
+			</td>
+			<td class="name">gd87****</td>
+			<td class="date">2018.08.10</td>
+		</tr>
+		</tbody>
+		<br><br><br>
+		</table><br><br>
+		
+		<button type="button" class="btn btn-default" value="목록" ><a href="../05movie/01.html">목록</a></button>
+		<button type="button" class="btn btn-default" value="삭제하기" ><a href="../04review/02.html">리뷰쓰기</a></button>
+		<br>
+		<center><ul class="pagination">
+			<li><a href="#">1</a></li>
+		    <li><a href="#">2</a></li>
+		    <li><a href="#">3</a></li>
+		    <li><a href="#">4</a></li>
+		    <li><a href="#">5</a></li>
+		</ul></center>
+    </div>
+    </div>
+    
+</body>
+<footer><hr>	
+	<div class="w3-content w3-section" style="max-width:500px">
+		<img class="mySlidesB" src="../res/img/b01.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b02.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b03.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b04.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b05.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b06.jpg" style="width:100%">
+	</div>
+</footer>
+<script>
+// banner
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlidesB");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+</html>

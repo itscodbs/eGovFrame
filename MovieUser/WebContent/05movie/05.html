@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>태인이네 영화관</title>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../res/css/common.css">
+<script type="text/javascript" src="../res/js/common.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>	
+	<!-- sidebar -->
+	<div class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-right"  style="display:none; right:0" id="mySidebar">
+		<button class="w3-bar-item w3-button w3-large" onclick="w3_close()"> &times;</button>
+		<a href="#" class="w3-bar-item w3-button"><i class="fa fa-fw fa-home"></i><strong>태인이네영화관</strong></a><hr>
+	  
+		<button class="w3-button w3-block w3-left-align w3-indigo" onclick="myAccFunc()">> 영화관소개</button>
+		<div id="demoAcc" class="w3-hide w3-white w3-card">
+			<a href="../01home/01.html" class="w3-bar-item w3-button">· 영화관소개</a>
+			<a href="../01home/02.html" class="w3-bar-item w3-button">· 좌석배치도</a>
+			<a href="../01home/03.html" class="w3-bar-item w3-button">· 주차장안내</a>
+	    </div>
+	
+		<button class="w3-button w3-block w3-left-align w3-indigo" onclick="myAccFunc2()">> 영화정보</button>
+		<div id="demoAcc2" class="w3-hide w3-white w3-card">
+			<a href="../05movie/01.html" class="w3-bar-item w3-button">· 현재상영작</a>
+			<a href="../05movie/02.html" class="w3-bar-item w3-button">· 상영시간표</a>
+			<a href="../05movie/03.html" class="w3-bar-item w3-button">· 상영예정작</a>
+		</div>
+	  
+		<button class="w3-button w3-block w3-left-align w3-indigo" onclick="myAccFunc3()">> 영화예매</button>
+		<div id="demoAcc3" class="w3-hide w3-white w3-card">
+			<a href="../03reservation/01.html" class="w3-bar-item w3-button">· 예매하기</a>
+			<a href="../03reservation/02.html" class="w3-bar-item w3-button">· 예매내역</a>
+			<a href="../03reservation/03.html" class="w3-bar-item w3-button">· 위시리스트</a>
+		</div>
+	
+		<button class="w3-button w3-block w3-left-align w3-indigo" onclick="myAccFunc4()">> 리뷰관리</button>
+		<div id="demoAcc4" class="w3-hide w3-white w3-card">
+			<a href="../04review/01.html" class="w3-bar-item w3-button">· 리뷰조회</a>
+			<a href="../04review/02.html" class="w3-bar-item w3-button">· 리뷰등록</a>
+			<a href="../04review/03.html" class="w3-bar-item w3-button">· 리뷰수정</a>
+		</div>
+		
+		<div>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<p><center>Copyrightⓒ 2018 By Team Cinema.Co.Ltd. All right reserved.</center></p>
+		</div>
+	</div>
+	
+	<!-- logo image -->
+	<div class="w3-container"><br>
+	<a class = "navbar-img-logo" href = "../main.html"><img src = "../res/img/logo.png" width="150px"></a>
+	</div>
+	
+	<!-- top menu -->
+	<div class="w3-display-topright w3-text-black">
+    <br>
+    <p><a href = "../02users/03.html"><i class="fa fa-address-card-o"></i> 마이페이지</a>
+	   <a href = "../02users/02.html"><i class="fa fa-user"></i> 로그인</a>
+	   <a href = "../02users/01.html"><i class="fa fa-check-square-o"></i> 회원가입　　　　　</a></p>
+	</div>
+    
+    <button class="w3-button w3-white w3-xlarge w3-indigo w3-display-topright" onclick="w3_open()">&#9776;</button>
+    <br><br>
+     
+    <!-- navbar menu -->
+    <div class="container" style="width:100%">
+	<div class="w3-bar w3-indigo w3-padding-small w3-medium" style="max-width:100%;" >
+		<a href="../main.html" class="w3-bar-item w3-button w3-text-white">
+			<i class="fa fa-fw fa-home"></i>
+			<strong>태인이네영화관</strong>
+		</a>
+	    
+		<div class="w3-dropdown-hover">
+			<button class="w3-button"><a href="../01home/01.html" class="w3-text-white"/>영화관소개</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="../01home/01.html" class="w3-bar-item w3-button">영화관소개</a>
+				<a href="../01home/02.html" class="w3-bar-item w3-button">좌석배치도</a>
+				<a href="../01home/03.html" class="w3-bar-item w3-button">주차장안내</a>
+			</div>
+		</div>
+	    
+		<div class="w3-dropdown-hover">
+			<button class="w3-button"><a href="../05movie/01.html" class="w3-text-white"/>영화정보</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="../05movie/01.html" class="w3-bar-item w3-button">현재상영작</a>
+				<a href="../05movie/02.html" class="w3-bar-item w3-button">상영시간표</a>
+				<a href="../05movie/03.html" class="w3-bar-item w3-button">상영예정작</a>
+			</div>
+		</div>
+	    
+		<div class="w3-dropdown-hover">
+			<button class="w3-button"><a href="../03reservation/01.html" class="w3-text-white"/>영화관예매</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="../03reservation/01.html" class="w3-bar-item w3-button">예매하기</a>
+				<a href="../03reservation/02.html" class="w3-bar-item w3-button">예매내역</a>
+				<a href="../03reservation/03.html" class="w3-bar-item w3-button">위시리스트</a>
+			</div>
+		</div>
+	
+		<div class="w3-dropdown-hover">
+			<button class="w3-button"><a href="../04review/01.html" class="w3-text-white"/>리뷰관리</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="../04review/01.html" class="w3-bar-item w3-button">리뷰조회</a>
+				<a href="../04review/02.html" class="w3-bar-item w3-button">리뷰등록</a>
+				<a href="../04review/03.html" class="w3-bar-item w3-button">리뷰수정</a>
+			</div>
+		</div>
+		<a href="#" class="w3-bar-item w3-button w3-small w3-light-gray w3-right"><i class="glyphicon glyphicon-search"></i></a>
+        <input type="text" class="w3-bar-item w3-input w3-small w3-white w3-right w3-text-gray" placeholder="검색할 내용을 입력하세요.">
+	</div>
+	</div><br>
+
+	<!-- side menu -->
+	<div class="container" style="width:100%">
+    <br><br>
+    	<ul class="w3-ul w3-left" style="width:200px"><br>
+		<p class="w3-text-indigo w3-large"><b>　영화정보</b></p>
+			<li class="active">
+				<a href="../05movie/01.html">현재상영작 <i class="icon fa fa-angle-right" aria-hidden="true"></i></a>
+			</li>
+			<li class="">
+				<a href="../05movie/02.html">상영시간표	<i class="icon fa fa-angle-right" aria-hidden="true"></i></a>
+			</li>
+			<li class="">
+				<a href="../05movie/03.html">상영예정작 <i class="icon fa fa-angle-right" aria-hidden="true"></i></a>
+			</li>
+		</ul>
+    
+    <!-- 05movie content-->    
+    <h3><p><b> 　l 　영화 정보</b></p></h3>
+	
+	<div class="container" style="width:1300px">
+	<div class="w3-row-padding ">
+	<button type="button" class="btn btn-default" value="목록" ><a href="../05movie/01.html">목록</a></button>
+	<hr><br><br>
+		<div class="w3-col l3 m6 w3-margin-bottom" style="width:400px">
+			<img src="../res/img/01.jpg" alt="Along with the Gods: The Last 49 Days, 2017" style="width:380px">
+		</div>
+		<div class="w3-col l3 m6 " style="width:800px"> 
+			<p><h3><b>신과함께-인과 연　 </b><small>Along with the Gods: The Last 49 Days, 2017</small></h3></p><br>
+		
+		<div class="panel panel-default faq-panel" >
+		<div class="panel-heading" role="tab" id="faq-item-113">
+			<h4 class="panel-title">
+				<a role="button" data-toggle="collapse"  href="#faq-item-113-body">
+				<center><b>영화 정보 및 예매</b></center></a>
+			</h4>
+		</div>
+			
+			<div class="panel-body" >
+				<p>
+				<strong>개요</strong>　판타지, 드라마  | 한국  | 141분  | 2018.08.01  <br>
+				<strong>감독</strong>　김용화<br>
+				<strong>출연</strong>　하정우(강림), 주지훈(해원맥), 김향기(덕춘)<br><br>
+				<strong>영웅인가 악당인가!</strong>
+				<p>	천 년 동안 48명의 망자를 환생시킨 저승 삼차사, 한 명만 더 환생시키면 그들도 새로운 삶을 얻을 수 있다.<br>
+			      	하지만 강림(하정우)은 원귀였던 수홍(김동욱)을 자신들의 마지막 귀인으로 정하는 이해할 수 없는 선택을 한다.<br>
+					저승법 상 원귀는 소멸되어야 마땅하나 염라대왕(이정재)은 저승 삼차사에게 새로운 조건을 내걸며 강림의 제안을 수락한다.<br>
+					염라의 조건은 성주신(마동석)이 버티고 있어 저승 차사들이 가는 족족 실패하는 허춘삼 노인을 수홍의 재판이 끝나기 전까지 저승으로 데려오는 것.<br> 
+					 <br>
+					허춘삼을 데리러 이승으로 내려간 해원맥(주지훈)과 덕춘(김향기), <br>
+					하지만 성주신의 막강한 힘 앞에 속수무책으로 당하기만 하던 중<br>
+					우연히 그가 천 년 전 과거에 해원맥과 덕춘을 저승으로 데려간 저승 차사였다는 사실을 알게 된다.<br>
+					스스로도 기억 못 하는 과거에 대한 호기심으로 해원맥과 덕춘은 성주신과 거래를 시작하는데…<br>
+					 <br>
+					이승과 저승, 현재와 과거를 오가는 천 년의 비밀이 밝혀진다!<br>
+				</p>
+			</div>
+			</div>
+			<br>
+			<button class="w3-button w3-indigo w3-block w3-right"><b>예매하기</b></button>
+		</div>
+		</div>
+		</div><br><br><br>
+		<hr><br>
+		<div class="container" >
+		<h4><p><b> 　| 　영화 리뷰 　| </b></p></h4>
+		
+		<table class="w3-table w3-bordered"  style="width:90%">
+		<colgroup>
+			<col>
+			<col width="100">
+			<col width="100">
+			<col width="100">
+		</colgroup>
+		
+		<thead> 
+			<tr class="w3-light-gray">
+				<th class="w3-center" scope="col">제목</th>
+				<th class="w3-center" scope="col">작성자</th>
+				<th class="w3-center" scope="col">날짜</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+		<tr class="w3-hover-light-blue">
+			<td class="title">
+				<a role="button" data-toggle="collapse"  href="#faq-item-112-body" >
+				<input type="checkbox"/>　와 너무재밋게봣어요 </a>			
+				<div id="faq-item-112-body" class="panel-collapse collapse" role="tabpanel" >
+				<div class="panel-body">
+					<p><br>신과 함께 1편을 영화관에서 훌쩍거리면서 보면서 너무재밌게봤엇어요
+							2편도 나온다고하길래 꼭 보러와야지 다짐까지했었구요
+							인과 연편 나오면서 개봉하는날 바로 예매해서 남사친이랑보러갔는데 
+							1편처럼 울컥거리는장면은 별로없었는데 강림(하정우) 따라다니는 주지훈(해원맥) 김향기(덕춘)
+							이 두사람의 얘기가 되게궁금했었는데 속시원하게 말해준것같아요 
+							강림이 알고보니 그 두사람을 죽인거에 약간놀라긴했지만 초반에 어느정도 예상이가더군요 그건좀 아쉬웠어요ㅠㅠ
+							하지만 3편이나온다면 또 보러갈것같아요 얼른 나왔으면.. 재밌었어요~!<br></p>
+				</div>
+				</div>
+			</td>
+			<td class="name">ha14**** </td>
+			<td class="date">2018.08.11</td>
+		</tr>
+		<tr class="w3-hover-light-blue" >
+			<td class="title">
+				<a role="button" data-toggle="collapse" href="#faq-item-113-body" >
+				<input type="checkbox"/>　신과함께 - 인과연</a>
+				<div id="faq-item-113-body" class="panel-collapse collapse" role="tabpanel" >
+				<div class="panel-body">
+					<p><br>엄청 엄청 기대한 영화인데,,
+							이번 신과함께2편은 약간 평이 나뉠꺼 같네요
+							저는 1편을 정말 재미있게 본 사람입니다
+							신기한 저승의 재판과정 독특한 cg부터,,,
+							전 너무 멋졌거든요
+							그래서 이번 2편도 사실 1편에 안보여준 재판과정을 무척 기대 했는데
+							과거 삼차사들의 얘기를 중점적으로 스토리를 풀어가셔서,,,
+							반전의 반전도 있었지만 약간 기대치에 못미쳤다고 할까?? ㅠㅠ<br></p>
+				</div>
+				</div>
+			</td>
+			<td class="name">ghre**** </td>
+			<td class="date">2018.08.10</td>
+		</tr>
+		<tr class="w3-hover-light-blue">
+			<td class="title">
+				<a role="button" data-toggle="collapse" href="#faq-item-114-body" >
+				<input type="checkbox"/>　갈수록 질이 떨어지는 망작 애니메이션</a>
+				<div id="faq-item-114-body" class="panel-collapse collapse" role="tabpanel" >
+				<div class="panel-body">
+					<p><br>몬스터 호텔 2 본 기억이 가물가물하는데요.
+					 	    몬스터 호텔 3는 한마디로 이야기해서 30분이면 끝날 내용인데 
+					 	    영화의 이야기와 상관없는 캐릭터들의 무분별한 나열과 퍼포먼스로 지루함을 남발하는 게  가장 큰 문제점이었음...<br></p>
+				</div>
+				</div>
+			</td>
+			<td class="name">vdfs**** </td>
+			<td class="date">2018.08.09</td>
+		</tr>
+		<tr class="w3-hover-light-blue">
+			<td class="title">
+				<a role="button" data-toggle="collapse"  href="#faq-item-115-body" >
+				<input type="checkbox"/>　좋은배우로 똥을만들다</a>
+				<div id="faq-item-115-body" class="panel-collapse collapse" role="tabpanel" >
+				<div class="panel-body">
+					<p><br>신과함께 1 에서의 설정도 유지못하는 감독때문에 몰입도 안되고 
+							전혀 궁금하지 않은 과거이야기 억지로 짜집기하는 느낌
+							마동석의 개그코드없었으면 자기 딱 좋은 영화..................<br></p>
+				</div>
+				</div>
+			</td>
+			<td class="name">vcsd****</td>
+			<td class="date">2018.08.07</td>
+			</tr>
+		<tr class="w3-hover-light-blue">
+			<td class="title">
+				<a role="button" data-toggle="collapse"  href="#faq-item-116-body" >
+				<input type="checkbox"/>　신과 함께 2  </a>
+				<div id="faq-item-116-body" class="panel-collapse collapse" role="tabpanel" >
+				<div class="panel-body">
+					<p><br>1편에 이어 2편도 영화관에서 관람하기 !
+							생각보다 후기가 좋지 않기는 했지만!
+							영화를 보기 전에 웹툰을 또 한 번 정주행 하고 보았는데, 
+							녹두생이 얘기가 어떻게 풀어질지 궁금했는데 그 부분이 영화화 되지 않아서 약간 아쉬웠다.
+							그래도 중요한 부분들을 영화적 요소로 잘 풀어낸 것 같다.
+							결말 부분이 너무 급작스럽기는 했지만, 웹툰과는 또다른 해석이 흥미로웠다.<br></p>
+				</div>
+				</div>
+			</td>
+			<td class="name">cvnt****</td>
+			<td class="date">2018.08.05</td>
+		</tr>
+		<tr class="w3-hover-light-blue">
+			<td class="title">
+				<a role="button" data-toggle="collapse"  href="#faq-item-117-body" >
+				<input type="checkbox"/>　[볼만한영화]_신과함께_인과연</a>
+				<div id="faq-item-117-body" class="panel-collapse collapse" role="tabpanel" >
+				<div class="panel-body">
+					<p><br>전생의 인과 연
+							현생의 업보
+							도대체 얼마나 얽히고 설킨것인가.....
+							전생이 존재한다면 난 어떤 모습이었을까....<br></p>
+				</div>
+				</div>
+			</td>
+			<td class="name">rtxd****</td>
+			<td class="date">2018.08.02</td>
+		</tr>
+		</tbody>
+		<br><br><br>
+		</table><br><br>
+		
+		<button type="button" class="btn btn-default" value="목록" ><a href="../05movie/01.html">목록</a></button>
+		<button type="button" class="btn btn-default" value="삭제하기" ><a href="../04review/02.html">리뷰쓰기</a></button>
+		<br>
+		<center><ul class="pagination">
+			<li><a href="#">1</a></li>
+		    <li><a href="#">2</a></li>
+		    <li><a href="#">3</a></li>
+		    <li><a href="#">4</a></li>
+		    <li><a href="#">5</a></li>
+		</ul></center>
+    </div>
+    </div>
+    
+</body>
+<footer><hr>	
+	<div class="w3-content w3-section" style="max-width:500px">
+		<img class="mySlidesB" src="../res/img/b01.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b02.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b03.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b04.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b05.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b06.jpg" style="width:100%">
+	</div>
+</footer>
+<script>
+// banner
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlidesB");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+</html>

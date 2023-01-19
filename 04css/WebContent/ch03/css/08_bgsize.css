@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+div{
+	width : 600px;
+	height : 400px;
+	background : url(../img/station.jpg) no-repeat;
+	border : 1px  solid black;
+	border-radius : 10px;
+	margin-bottom : 20px;
+}
+
+.bgsize1{background-size:auto;}
+.bgsize2{background-size:300px;}
+.bgsize3{background-size:200px 150px;}
+.bgsize4{background-size:45% auto;}
+.bgsize5{background-size:contain;}
+.bgsize6{background-size:cover;}

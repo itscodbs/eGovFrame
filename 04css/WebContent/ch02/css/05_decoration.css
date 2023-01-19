@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+
+.line1 {
+	text-decoration : underline;
+}
+
+.line2 {
+	text-decoratin : overline;
+}
+
+.line3 {
+	text-decoration : line-through;
+}
+
+.line4 {
+	text-decoration : overline underline;
+}
+
+p{
+	line-height : 20px;
+}

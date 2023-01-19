@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Bootstrap</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<h2>Basic Table</h2>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>이름</th>
+					<th>나이</th>
+					<th>주소</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>최한석</td>
+					<td>25</td>
+					<td>서울 마포구</td>
+				</tr>
+				<tr>
+					<td>한아름</td>
+					<td>30</td>
+					<td>서울 은평구</td>
+				</tr>
+				<tr>
+					<td>김아라</td>
+					<td>35</td>
+					<td>서울 강남구</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2>Striped rows</h2>
+		<table class="table table-stripted">
+			<thead>
+				<tr>
+					<th>이름</th>
+					<th>나이</th>
+					<th>주소</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>최한석</td>
+					<td>30</td>
+					<td>서울 마포구</td>
+				</tr>
+				<tr>
+					<td>한아름</td>
+					<td>30</td>
+					<td>서울 은평구</td>
+				</tr>
+				<tr>
+					<td>김아라</td>
+					<td>35</td>
+					<td>서울 강남구</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2>Bordered Table</h2>
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>이름</th>
+					<th>나이</th>
+					<th>주소</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>최한석</td>
+					<td>30</td>
+					<td>서울 마포구</td>
+				</tr>
+				<tr>
+					<td>한아름</td>
+					<td>30</td>
+					<td>서울 은평구</td>
+				</tr>
+				<tr>
+					<td>김아라</td>
+					<td>35</td>
+					<td>서울 강남구</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2>Hover Rows</h2>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>이름</th>
+					<th>나이</th>
+					<th>주소</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>최한석</td>
+					<td>30</td>
+					<td>서울 마포구</td>
+				</tr>
+				<tr>
+					<td>한아름</td>
+					<td>30</td>
+					<td>서울 은평구</td>
+				</tr>
+				<tr>
+					<td>김아라</td>
+					<td>35</td>
+					<td>서울 강남구</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2>Condensed Table</h2>
+		<table class="table table-condensed">
+			<thead>
+				<tr>
+					<th>이름</th>
+					<th>나이</th>
+					<th>주소</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>최한석</td>
+					<td>30</td>
+					<td>서울 마포구</td>
+				</tr>
+				<tr>
+					<td>한아름</td>
+					<td>30</td>
+					<td>서울 은평구</td>
+				</tr>
+				<tr>
+					<td>김아라</td>
+					<td>35</td>
+					<td>서울 강남구</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2>Contextual Classes</h2>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>이름</th>
+					<th>나이</th>
+					<th>주소</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="success">
+					<td>최한석</td>
+					<td>30</td>
+					<td>서울 마포구</td>
+				</tr>
+				<tr class="danger">
+					<td>한아름</td>
+					<td>30</td>
+					<td>서울 은평구</td>
+				</tr>
+				<tr class="info">
+					<td>김아라</td>
+					<td>35</td>
+					<td>서울 강남구</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div class="table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>번호</th>
+						<th>이름</th>
+						<th>나이</th>
+						<th>도시</th>
+						<th>구</th>
+						<th>동</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>최한석</td>
+						<td>27</td>
+						<td>서울</td>
+						<td>마포구</td>
+						<td>상암동</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>
+
+<!-- 
+table class adds basic styling to a table.
+table-striped class adds zebra-stripes to a table.
+table-bordered class adds borders on all sides of the table and cells.
+table-hover class enables a hover state on table rows.
+table-condensed class makes a table more compact by cutting cell padding in half.
+Contextual classes can be used to color to the table row or table cells(<td>):
+	.active Applies the hover color to the table row or table cell
+	.success Indicates a successful or positive action
+	.info Indicates a neutral informative change or action
+	.warning Indicated a warning that might need attention.
+	.danger Indicates a dangerous or potentially negative action
+table-responsive class creates a responsive table.
+	The table will then scroll horizontally on small devices (unde 768px).
+	When viewing on anything larger than 768px wide, there os no difference.
+ -->

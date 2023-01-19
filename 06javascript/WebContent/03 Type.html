@@ -1,0 +1,93 @@
+<script>
+
+//Types in Javascript fall into two categories : primitives and objects.
+//Primitive types include : String, Number, Boolean, null, undefined
+
+///// String /////
+// String can be created with double or single quotes.
+var a = "I am a string";
+var b = "So am I";
+
+// Sometimes a strung may contain quotation marks.
+var statement1 = 'He said "Javascript is awesome!"';
+var statement2 = "He said \"JavaScript is awesome!\"";
+/////////////////
+
+///// Number /////
+// Numebers are any whole or floating point integer.
+var num1 = 100;
+var num2 = 100.10;
+var num3 = 0.10;
+/////////////////
+
+///// Boolean /////
+var okay = true;
+var fail = false;
+/////////////////
+
+///// null and undefined /////
+// Define a null value. Null types are values that represent the absence of a value
+var foo = null;
+
+// Undefined types represent a state in which no value has been assigned at all/
+// This type is created in two ways : by using the undefined keyword or by not defining a values at all.
+var bar1 = undefined;
+var bar2;
+//////////////////////////////////
+
+///// Objects /////
+// Creating an object with the constructor:
+var person1  = new Object;
+person1.firstName = "John";
+person1.lastName = "Doe";
+console.log(person1.firstName + " " + person1.lastName); // John Doe
+
+// Creating ad object with the literal syntax:
+var person2 = {
+		firstName : "Jane",
+		lastName : "Doe"
+};
+console.log(person2.firstName + " " + person2.lastName);  // John Doe
+
+// objects can also have objects as a property/
+var people = {};
+people.person1 = person1;
+people["person2"] = person2;
+console.log(people["person1"].firstName); // John
+console.log(people.person2.firstName); // Jane
+
+// Properties that have not been created are undefined
+var person = {name : "John Doe"};
+console.log(person.email);
+//////////////////////////////////
+
+///// Array /////
+// creating an array with the constructor :
+var foo = new Array;
+
+// creating an array with the array literal syntax :
+var bar = [];
+
+// The array literal returns a foo.length value of 1 :
+
+var foo = [100];
+console.log(foo[0]);
+console.log(foo.length);
+
+// The array constructor returns a bar.lengh value of 100 : 
+var bar = new Array(100);
+console.log(bar[0]);
+console.log(bar.length);
+
+// Using JavaScript's typeof operator operator to test for primitive types : 
+var myValue = [1,2,3];
+console.log(typeof myValue);
+console.log(typeof myValue === "number");
+console.log(typeof myValue === "undefined");
+console.log(typeof myValue === "boolean");
+console.log(typeof myValue === "object");
+
+// Using strict equality operaor to check for null : 
+console.log(myValue === null); // false
+
+</script>

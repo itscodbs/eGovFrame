@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xmlns:mybatis="http://mybatis.org/schema/mybatis-spring"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context.xsd
+		http://mybatis.org/schema/mybatis-spring
+		http://mybatis.org/schema/mybatis-spring.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop.xsd">
+		
+		<!-- ch01.mvc -->
+		<context:component-scan base-package="spring.web2"/>
+		<mvc:annotation-driven/>
+		<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+			<property name="prefix" value="/WEB-INF/views/"/>
+			<property name="suffix" value=".jsp"/>
+		</bean>
+		
+		<!-- ch02.resource -->
+		<mvc:resources location="/WEB-INF/resource/img" mapping="/img/**"/>
+		<mvc:resources location="/WEB-INF/resource/css" mapping="/css/**"/>
+		<mvc:resources location="/WEB-INF/resource/js" mapping="/js/**"/>
+		
+		<!-- ch04.mybatis -->
+		<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+			<property name="jndiName" value="java:comp/env/jdnc/hr"/>
+			<property name="resourceRef" value="true"/>
+		</bean>
+		<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+			<property name="dataSource" ref="dataSource"/>
+			<property name="configLocation"
+				value="classpath:spring/web2/ch04/config/SqlMapConfig.xml"/>
+			<property name="mapperLocations">
+				<array>
+					<value>classpath:spring/web2/**/dap/mapper/**/*.xml</value>
+				</array>
+			</property>
+		</bean>
+		<mybatis:scan base-package="spring.web2.**.dao.mapper"/>
+		
+		<!-- ch05.ajax -->
+		<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+			<property name="messageConverters">
+				<list>
+					<bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"/>
+				</list>
+			</property>
+		</bean>
+		
+		<!-- ch06.file upload -->
+		<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+		<context:property-placeholder location="classpath:spring/web2/ch06/config/upload.properties"/>
+		<mvc:resources mapping="/upload/**" location="/upload/"/>
+		
+		<!-- ch07.@Transactional -->
+		<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+			<property name="dataSource" ref="dataSource"/>
+		</bean>
+		<tx:annotation-driven transaction-manager="transactionManager"/>
+		<mybatis:scan base-package="spring.web2.ch07.ex01.dao.mapper"/>
+		
+		<aop:aspectj-autoproxy/>
+		
+		<!-- ch09.ex01: intercepter -->
+		<bean id="consoleInterceptor" class="spring.web2.ch09.ex01.ConsoleInterceptor"></bean>
+		<mvc:interceptors>
+			<mvc:interceptor>
+				<mvc:mapping path="/ch09/ex01/**"/>
+				<ref bean ="consoleInterceptor"/>
+			</mvc:interceptor>
+		</mvc:interceptors>
+		
+		<!-- ch09.ex02 : interceptor -->
+		<bean id="loginInterceptor" class="spring.web2.ch09.ex02.LoginInterceptor"></bean>
+		<mvc:interceptors>
+			<mvc:interceptor>
+				<mvc:mapping path="/ch09/ex02/**"/>
+				<ref bean="loginInterceptor"/>
+				</mvc:interceptor>
+		</mvc:interceptors>
+		
+		
+</beans>
+
+

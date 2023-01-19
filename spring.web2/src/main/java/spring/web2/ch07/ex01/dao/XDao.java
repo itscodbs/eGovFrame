@@ -1,0 +1,9 @@
+package spring.web2.ch07.ex01.dao;
+
+import java.util.List;
+
+public interface XDao {
+	int addNext();
+	int addCurr();
+	List<Integer> getRows();
+}

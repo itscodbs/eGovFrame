@@ -1,0 +1,12 @@
+@CHARSET "UTF-8";
+#tb1{
+	width : 300px;
+	table-layout : fixed; /* fixed : 셀 너비 고정, auto : 셀 너비 자동조정(기본값)*/
+	word-break : break-all;
+	height : auto;
+}
+
+th,td {
+	border : 1px solid black;
+	padding : 5px;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>태인이네 영화관</title>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../res/css/common.css">
+<script type="text/javascript" src="../res/js/common.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>	
+	<!-- sidebar-->
+	<div class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-right"  style="display:none; right:0" id="mySidebar">
+		<button class="w3-bar-item w3-button w3-large" onclick="w3_close()"> &times;</button>
+		<a href="#" class="w3-bar-item w3-button"><i class="fa fa-fw fa-home"></i><strong>태인이네영화관</strong></a><hr>
+	  
+		<button class="w3-button w3-block w3-left-align w3-indigo" onclick="myAccFunc()">> 영화관소개</button>
+		<div id="demoAcc" class="w3-hide w3-white w3-card">
+			<a href="../01home/01.html" class="w3-bar-item w3-button">· 영화관소개</a>
+			<a href="../01home/02.html" class="w3-bar-item w3-button">· 좌석배치도</a>
+			<a href="../01home/03.html" class="w3-bar-item w3-button">· 주차장안내</a>
+	    </div>
+	
+		<button class="w3-button w3-block w3-left-align w3-indigo" onclick="myAccFunc2()">> 영화정보</button>
+		<div id="demoAcc2" class="w3-hide w3-white w3-card">
+			<a href="../05movie/01.html" class="w3-bar-item w3-button">· 현재상영작</a>
+			<a href="../05movie/02.html" class="w3-bar-item w3-button">· 상영시간표</a>
+			<a href="../05movie/03.html" class="w3-bar-item w3-button">· 상영예정작</a>
+		</div>
+	  
+		<button class="w3-button w3-block w3-left-align w3-indigo" onclick="myAccFunc3()">> 영화예매</button>
+		<div id="demoAcc3" class="w3-hide w3-white w3-card">
+			<a href="../03reservation/01.html" class="w3-bar-item w3-button">· 예매하기</a>
+			<a href="../03reservation/02.html" class="w3-bar-item w3-button">· 예매내역</a>
+			<a href="../03reservation/03.html" class="w3-bar-item w3-button">· 위시리스트</a>
+		</div>
+	
+		<button class="w3-button w3-block w3-left-align w3-indigo" onclick="myAccFunc4()">> 리뷰관리</button>
+		<div id="demoAcc4" class="w3-hide w3-white w3-card">
+			<a href="../04review/01.html" class="w3-bar-item w3-button">· 리뷰조회</a>
+			<a href="../04review/02.html" class="w3-bar-item w3-button">· 리뷰등록</a>
+			<a href="../04review/03.html" class="w3-bar-item w3-button">· 리뷰수정</a>
+		</div>
+		
+		<div>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<p><center>Copyrightⓒ 2018 By Team Cinema.Co.Ltd. All right reserved.</center></p>
+		</div>
+	</div>
+	
+	<!-- logo image -->
+	<div class="w3-container"><br>
+	<a class = "navbar-img-logo" href = "../main.html"><img src = "../res/img/logo.png" width="150px"></a>
+	</div>
+	
+	<!-- top menu -->
+	<div class="w3-display-topright w3-text-black">
+    <br>
+    <p><a href = "../02users/03.html"><i class="fa fa-address-card-o"></i> 마이페이지</a>
+	   <a href = "../02users/02.html"><i class="fa fa-user"></i> 로그인</a>
+	   <a href = "../02users/01.html"><i class="fa fa-check-square-o"></i> 회원가입　　　　　</a></p>
+	</div>
+    
+    <button class="w3-button w3-white w3-xlarge w3-indigo w3-display-topright" onclick="w3_open()">&#9776;</button>
+    <br><br>
+     
+    <!-- navbar menu -->
+    <div class="container" style="width:100%">
+	<div class="w3-bar w3-indigo w3-padding-small w3-medium" style="max-width:100%;" >
+		<a href="../main.html" class="w3-bar-item w3-button w3-text-white">
+			<i class="fa fa-fw fa-home"></i>
+			<strong>태인이네영화관</strong>
+		</a>
+	    
+		<div class="w3-dropdown-hover">
+			<button class="w3-button"><a href="../01home/01.html" class="w3-text-white"/>영화관소개</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="../01home/01.html" class="w3-bar-item w3-button">영화관소개</a>
+				<a href="../01home/02.html" class="w3-bar-item w3-button">좌석배치도</a>
+				<a href="../01home/03.html" class="w3-bar-item w3-button">주차장안내</a>
+			</div>
+		</div>
+	    
+		<div class="w3-dropdown-hover">
+			<button class="w3-button"><a href="../05movie/01.html" class="w3-text-white"/>영화정보</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="../05movie/01.html" class="w3-bar-item w3-button">현재상영작</a>
+				<a href="../05movie/02.html" class="w3-bar-item w3-button">상영시간표</a>
+				<a href="../05movie/03.html" class="w3-bar-item w3-button">상영예정작</a>
+			</div>
+		</div>
+	    
+		<div class="w3-dropdown-hover">
+			<button class="w3-button"><a href="../03reservation/01.html" class="w3-text-white"/>영화관예매</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="../03reservation/01.html" class="w3-bar-item w3-button">예매하기</a>
+				<a href="../03reservation/02.html" class="w3-bar-item w3-button">예매내역</a>
+				<a href="../03reservation/03.html" class="w3-bar-item w3-button">위시리스트</a>
+			</div>
+		</div>
+	
+		<div class="w3-dropdown-hover">
+			<button class="w3-button"><a href="../04review/01.html" class="w3-text-white"/>리뷰관리</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="../04review/01.html" class="w3-bar-item w3-button">리뷰조회</a>
+				<a href="../04review/02.html" class="w3-bar-item w3-button">리뷰등록</a>
+				<a href="../04review/03.html" class="w3-bar-item w3-button">리뷰수정</a>
+			</div>
+		</div>
+		<a href="#" class="w3-bar-item w3-button w3-small w3-light-gray w3-right"><i class="glyphicon glyphicon-search"></i></a>
+        <input type="text" class="w3-bar-item w3-input w3-small w3-white w3-right w3-text-gray" placeholder="검색할 내용을 입력하세요.">
+	</div>
+	</div><br>
+
+	<!-- side menu -->
+	<div class="container" style="width:100%">
+    <br><br>
+    	<ul class="w3-ul w3-left" style="width:200px"><br>
+		<p class="w3-text-indigo w3-large"><b>　리뷰관리</b></p>
+			<li class="active">
+				<a href="../04review/01.html">리뷰조회 <i class="icon fa fa-angle-right" aria-hidden="true"></i></a>
+			</li>
+			<li class="">
+				<a href="../04review/02.html">리뷰등록 <i class="icon fa fa-angle-right" aria-hidden="true"></i></a>
+			</li>
+			<li class="">
+				<a href="../04review/03.html">리뷰수정 <i class="icon fa fa-angle-right" aria-hidden="true"></i></a>
+			</li>
+		</ul>
+		
+	<!-- 04review content-->
+    <h3><p><b> 　l 　리뷰수정</b></p></h3><br><br>
+    
+	<div class="container" style="width:1200px">
+			<form>
+				<div class="form-group">
+				<p>※ 먼저 리뷰를 수정할 영화를 선택해주세요. ※</p><br>
+				<label for="sel1">관람한 영화 목록 (예매내역) : </label>
+				    <select class="form-control" id="sel1">
+				    	<option>[20180810001] 신과함께-인과연</option>
+				        <option>[20180809002] 공작</option>
+				        <option>[20180808003] 맘마미아!2</option>
+				        <option>[20180807004] 미션임파서블:폴아웃</option>
+				        <option>[20180806005] 몬스터호텔3</option>
+				      </select>
+				      <br>
+		     	 </div>
+				<label for="comment">영화 리뷰 수정 : </label>
+				<textarea class="form-control" rows="5" id="comment"></textarea>
+				<br>
+				<button type="button" class="btn btn-default" value="수정하기" ><a href="#">수정하기</a></button>
+				<button type="button" class="btn btn-default" value="돌아가기"><a href="../04review/01.html">돌아가기</a></button>
+			</div>
+		</form>
+	</div>
+</body>
+<footer><hr>	
+	<div class="w3-content w3-section" style="max-width:500px">
+		<img class="mySlidesB" src="../res/img/b01.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b02.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b03.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b04.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b05.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b06.jpg" style="width:100%">
+	</div>
+</footer>
+<script>
+// banner
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlidesB");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+</html>

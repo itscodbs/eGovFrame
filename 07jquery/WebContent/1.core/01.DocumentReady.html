@@ -1,0 +1,18 @@
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+	// A $(document).ready() block.
+	$(document).ready(function(){
+		$("body").append("<p>one</p>");
+	});
+	
+	// Shorthand for $(document).ready()
+	$(function(){
+		$("body").append("<p>two</p>");
+	});
+	
+	// Passing a named function instead of an annoymous function.
+	function readyFn(){
+		$("body").append("<p>three</p>");
+	}
+	$(document).ready(readyFn);	
+</script>

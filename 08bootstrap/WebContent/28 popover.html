@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>Popover</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+ <h3>Popover</h3>
+ <a href="#" data-toggle="popover" title="제목" data-content="내용">Toggle popover</a>
+ 
+ <h3>Popover Position</h3>
+ <ul class="list-inline">
+ 	<li><a href="#" data-toggle="popover" data-placement="top" title="제목" data-content="내용">Top</a></li>
+ 	<li><a href="#" data-toggle="popover" data-placement="bottom" title="제목" data-content="내용">Bottom</a></li>
+ 	<li><a href="#" data-toggle="popover" data-placement="left" title="제목" data-content="내용">Left</a></li>
+ 	<li><a href="#" data-toggle="popover" data-placement="right" title="제목" data-content="내용">Right</a></li>
+ </ul>
+ 
+ <h3>Popover Close</h3>
+ 	<a href="#" title="제목" data-toggle="popover" data-trigger="focus" data-content="내용">Click me</a>
+ 	<a href="#" title="제목" data-toggle="popover" data-trigger="hover" data-content="내용">Click me</a>
+</div>
+
+<script>
+$(document).ready(function(){
+	$('[data-toggle="popover"]').popover();
+});
+</script>
+</body>
+</html>
+<!-- 
+The popover plugin similar to tooltips; it is pop-up bax that appears
+when the user clicks on an element.
+The difference  is that popover can contain much more content.
+the popover will appear on the rigt side of the element.
+Use the data-placement attribute to set the position of the popover
+on top, botton, left or the right side of the element.
+To create a popover, add the data-toggle="popover" attribute to an element.
+Use the title attribute to specify the header text of the popover,
+and use the data-content attributes to specify the text that should be displayed
+inside the popover's boby.
+Popovers must be initailized with jQuery : 
+select the specified element and call the popover() method.
+the popover is closed when you click on the element again.
+However, you can use the data-trigger="focus" attribute which will close the popover
+when clicking outside the element.
+If you want to hte popover to be displayed when you move the mouse pointer over the element,
+use the data-trigger attribute with a value of "hover". 
+ -->

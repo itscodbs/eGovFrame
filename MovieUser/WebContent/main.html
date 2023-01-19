@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>태인이네 영화관</title>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1 text/html;" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="res/css/common.css">
+<script type="text/javascript" src="res/js/common.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="">	
+	<div ng-include="'res/html/mainMenu.html'"></div>
+	
+	<!-- Main content -->
+	<!-- slide show -->
+	<hr>
+	
+	<div class="w3-content w3-display-container w3-center" style="max-width: 900px">
+	<p class="w3-text-gray w3-xlarge"><b>현재상영작</b></p><br>
+	<div class="w3-content w3-section" style="max-width:500px">
+		<center required="required">
+		<img class="mySlides" src="res/img/01.jpg" style="width:300px">
+		<img class="mySlides" src="res/img/02.jpg" style="width:300px">
+		<img class="mySlides" src="res/img/03.jpg" style="width:300px"> 
+		<img class="mySlides" src="res/img/04.jpg" style="width:300px">
+		<img class="mySlides" src="res/img/05.jpg" style="width:300px">
+		<img class="mySlides" src="res/img/06.jpg" style="width:300px">
+		</center>
+	</div><br><br><br>
+		<div class="w3-center w3-container w3-section w3-large w3-text-indigo w3-display-bottommiddle" style="width: 100%">
+		<div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+		<div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+			<span class="w3-badge demo w3-border w3-transparent w3-hover-indigo" onclick="currentDiv(1)"></span> 
+			<span class="w3-badge demo w3-border w3-transparent w3-hover-indigo" onclick="currentDiv(2)"></span>
+			<span class="w3-badge demo w3-border w3-transparent w3-hover-indigo" onclick="currentDiv(3)"></span>
+			<span class="w3-badge demo w3-border w3-transparent w3-hover-indigo" onclick="currentDiv(4)"></span>
+			<span class="w3-badge demo w3-border w3-transparent w3-hover-indigo" onclick="currentDiv(5)"></span>
+			<span class="w3-badge demo w3-border w3-transparent w3-hover-indigo" onclick="currentDiv(6)"></span>
+		</div>
+		</div>
+
+	<hr><br>
+	
+	<!-- Tab button -->
+	<div class="container">
+    <center>
+    	<p><button class="w3-button w3-border w3-large w3-wide w3-text-indigo" onclick="openTab('reservation')">
+        <i class="fa fa-film"></i><b>현재상영작</b></button>
+    	<button class="w3-button w3-border w3-large w3-wide w3-text-indigo" onclick="openTab('trailer')">
+        <i class="fa fa-credit-card"></i><b>개봉예정작</b></button>
+  		<button class="w3-button w3-border w3-large w3-wide w3-text-indigo" onclick="openTab('time')">
+        <span class="glyphicon glyphicon-time"></span><b>상영시간</b></button>
+    	<button class="w3-button w3-border w3-large w3-wide w3-text-indigo" onclick="openTab('parking')">
+        <i class="fa fa-automobile"></i><b>주차안내</b></button></p>
+   	   </center>
+	</div><br>
+    
+    <div class="container" style="width:1300px">
+    <div id="reservation" class="w3-container w3-center w3-display-container tab" >
+    <span onclick="this.parentElement.style.display='none'" class="w3-button w3-large w3-display-topright">&times;</span>
+	<div class="w3-row-padding" ><hr>
+		<div class="w3-col l3 m6 w3-margin-bottom" >
+			<img src="res/img/05.jpg" alt="Hotel Transylvania 3: A Monster Vacation" style="width:250px">
+			<h5>몬스터호텔3</h5>
+			<p class="w3-opacity">젠디 타타코브스키<br>2018.08.08</p>
+			<p><strong>고생 끝! 행복한 휴가 시작?!</strong></p>
+			<p>평생 몬스터 호텔을 지키며 단 하루도 쉴 틈이 없었던 단 하루도 쉴 틈이 없었던 몬스터 호 ...</p>
+			<p><button class="w3-button w3-light-grey w3-block"><a href="#"/>예매하기</button></p>
+		</div>
+		
+		<div class="w3-col l3 m6 w3-margin-bottom">
+			<img src="res/img/01.jpg" alt="Along with the Gods: The Last 49 Days" style="width:250px">
+			<h5>신과함께-인과연</h5>
+			<p class="w3-opacity">김용화<br>2018.08.01</p>
+			<p><strong>이승과 저승, 현재와 과거를 오가는 천 년의 비밀이 밝혀진다!</strong></p>
+			<p>천 년 동안 48명의 망자를 환생시킨 저승 삼 ... </p>
+			<p><button class="w3-button w3-light-grey w3-block"><a href="#"/>예매하기</button></p>
+		</div>
+	    
+		<div class="w3-col l3 m6 w3-margin-bottom">
+			<img src="res/img/02.jpg" alt="공작"  style="width:250px">
+			<h5>공작</h5>
+			<p class="w3-opacity">윤종빈<br>2018.08.08</p>
+			<p><strong>북으로 간 스파이, 암호명 흑금성</strong></p>
+			<p>1993년, 북한 핵 개발을 둘러싸고 한반도의 위기가 고조된다.  정보사 소령 출신으로...  </p>
+			<p><button class="w3-button w3-light-grey w3-block"><a href="#"/>예매하기</button></p>
+		</div>
+	    
+	    <div class="w3-col l3 m6 w3-margin-bottom">
+			<img src="res/img/03.jpg" alt="Mamma Mia! Here We Go Again" style="width:250px">
+			<h5>맘마미아!2</h5>
+			<p class="w3-opacity">올 파커<br>2018.08.08</p>
+			<p><strong>전세계가 사랑한 최고의 뮤지컬 영화가 돌아온다!</strong></p>
+			<p>“인생은 짧고 세상은 넓어. 멋진 추억을 만들...</p>
+			<p><button class="w3-button w3-light-grey w3-block"><a href="#"/>예매하기</button></p>
+		</div>	
+	</div>	   
+    </div>
+    </div>
+    
+    <div class="container" style="width:1300px">
+    <div id="trailer" class="w3-container w3-center w3-display-container tab">
+    <span onclick="this.parentElement.style.display='none'" class="w3-button w3-large w3-display-topright">&times;</span>
+	<div class="w3-row-padding" ><hr>
+		<div class="w3-col l3 m6 w3-margin-bottom">
+			<img src="res/img/12.jpg" alt="venom" style="width:250px">
+			<h5>Venom</h5>
+			<p class="w3-opacity">루벤 플레셔<br> 2018.10 개봉예정</p>
+			<p><strong>영웅인가 악당인가!</strong></p>
+			<p><button class="w3-button w3-light-grey w3-block"><a href="#"/>예매하기</button></p>
+		</div>
+		
+		<div class="w3-col l3 m6 w3-margin-bottom">
+			<img src="res/img/13.jpg" alt="너의 결혼식" style="width:250px">
+			<h5>너의 결혼식</h5>
+			<p class="w3-opacity">이석근<br>2018.08.22 개봉예정</p>
+			<p><strong>기억하나요? 당신의 첫사랑</strong></p>
+			<p><button class="w3-button w3-light-grey w3-block"><a href="#"/>예매하기</button></p>
+		</div>
+	    
+		<div class="w3-col l3 m6 w3-margin-bottom">
+			<img src="res/img/16.jpg" alt="암수살인"  style="width:250px">
+			<h5>암수살인</h5>
+			<p class="w3-opacity">김태균<br>2018.10 개봉예정</p>
+			<p><strong>피해자는 있지만 신고도, 시체도, ...</strong></p>
+			<p><button class="w3-button w3-light-grey w3-block"><a href="#"/>예매하기</button></p>
+		</div>
+	    
+	    <div class="w3-col l3 m6 w3-margin-bottom">
+			<img src="res/img/15.jpg" alt="Mamma Mia! Here We Go Again" style="width:250px">
+			<h5>신비한 동물들과 그린델왈드의 법칙</h5>
+			<p class="w3-opacity">데이빗 예이츠<br>2018.11 개봉예정</p>
+			<p><strong>마법 세계의 운명을 건 전쟁이...</strong></p>
+			<p><button class="w3-button w3-light-grey w3-block"><a href="#"/>예매하기</button></p>
+		</div>	
+	</div>
+    </div>
+    </div><br>
+
+   	<div class="container" style="width:1300px">
+    <div id="time" class="w3-container w3-center w3-display-container tab"><hr>
+    <span onclick="this.parentElement.style.display='none'" class="w3-button w3-large w3-display-topright">&times;</span>
+    <p> 등록된 시간이 존재하지 않습니다.</p>
+	</div>
+	</div>
+	
+	<div class="container w3-center" style="width:1300px">
+	<div id="parking" class="w3-container w3-display-container tab">
+    <span onclick="this.parentElement.style.display='none'" class="w3-button w3-large w3-display-topright">&times;</span>
+	<hr><span class="text"><b>CINEMA(E/V)</b></span><br><br>
+		
+	<div class="row" >
+		<div class="col">
+			<button class="w3-btn w3-indigo w3-border-indigo w3-round-large"> A</button>
+			<button class="w3-btn w3-white w3-border w3-border-white w3-round-large">　</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">1</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">2</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">3</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">4</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">5</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">6</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">7</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">8</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">9</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">10</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">11</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">12</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">13</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">14</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">15</button>
+			<button class="w3-btn w3-white w3-border w3-border-white w3-round-large">　</button>
+		    <button class="w3-btn w3-indigo w3-border-indigo w3-round-large"> A</button><br><br>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col">
+			<button class="w3-btn w3-indigo w3-border-indigo w3-round-large"> B</button>
+			<button class="w3-btn w3-white w3-round-large">　</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">1</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">2</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">3</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">4</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">5</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">6</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">7</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">8</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">9</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">10</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">11</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">12</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">13</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">14</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">15</button>
+			<button class="w3-btn w3-white w3-border w3-border-white w3-round-large">　</button>
+			<button class="w3-btn w3-indigo w3-border-indigo w3-round-large"> B</button>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col">
+			<button class="w3-btn w3-indigo w3-border-indigo w3-round-large"> C</button>
+			<button class="w3-btn w3-white w3-border w3-border-white w3-round-large">　</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">1</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">2</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">3</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">4</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">5</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">6</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">7</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">8</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">9</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">10</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">11</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">12</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">13</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">14</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">15</button>
+			<button class="w3-btn w3-white w3-border w3-border-white w3-round-large">　</button>
+			<button class="w3-btn w3-indigo w3-border-indigo w3-round-large"> C</button><br><br>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col">
+			<button class="w3-btn w3-indigo w3-border-indigo w3-round-large"> D</button>
+			<button class="w3-btn w3-white w3-border w3-border-white w3-round-large">　</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">1</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">2</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">3</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">4</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">5</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">6</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">7</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">8</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">9</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">10</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">11</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">12</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">13</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">14</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">15</button>
+			<button class="w3-btn w3-white w3-border w3-border-white w3-round-large">　</button>
+			<button class="w3-btn w3-indigo w3-border-indigo w3-round-large"> D</button>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col">
+			<button class="w3-btn w3-indigo w3-border-indigo w3-round-large"> E</button>
+			<button class="w3-btn w3-white w3-border w3-border-white w3-round-large">　</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">1</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">2</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">3</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">4</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">5</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">6</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">7</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">8</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">9</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">10</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">11</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">12</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">13</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">14</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">15</button>
+			<button class="w3-btn w3-white w3-border w3-border-white w3-round-large">　</button>
+			<button class="w3-btn w3-indigo w3-border-indigo w3-round-large"> E</button><br><br>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col">
+			<button class="w3-btn w3-indigo w3-border-indigo w3-round-large"> F</button>
+			<button class="w3-btn w3-white w3-border w3-border-white w3-round-large">　</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">1</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">2</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">3</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">4</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">5</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">6</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">7</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">8</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">9</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">10</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">11</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">12</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">13</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">14</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">15</button>
+			<button class="w3-btn w3-white w3-border w3-border-white w3-round-large">　</button>
+			<button class="w3-btn w3-indigo w3-border-indigo w3-round-large"> F</button>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col">
+			<button class="w3-btn w3-indigo w3-border-indigo w3-round-large"> G</button>
+			<button class="w3-btn w3-white w3-border w3-border-white w3-round-large">　</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">1</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">2</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">3</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">4</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">5</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">6</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">7</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">8</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">9</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">10</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">11</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">12</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">13</button>
+			<button class="w3-btn w3-white w3-border w3-border-gray w3-round-large">14</button>
+			<button class="w3-btn w3-gray w3-border w3-border-gray w3-round-large">15</button>
+			<button class="w3-btn w3-white w3-border w3-border-white w3-round-large">　</button>
+			<button class="w3-btn w3-indigo w3-border-indigo w3-round-large"> G</button>
+		</div>
+	</div><br><br>
+	<span class="text"><b>ENTERANCE</b></span>
+	
+		<br><br><hr>
+		<div>
+		<p><b>[ 실시간 잔여주차가능대수 ]</b></p>
+		<br>
+		<p>· A구역 : 잔여대수 0 (만차)</p>
+		<p>· B구역 : 잔여대수 2 (부족)</p>
+		<p>· C구역 : 잔여대수 6 (부족)</p>
+		<p>· D구역 : 잔여대수 4 (부족)</p>
+		<p>· E구역 : 잔여대수 3 (부족)</p>
+		<p>· F구역 : 잔여대수 8 (여유)</p>
+		<p>· G구역 : 잔여대수 10 (여유)</p><br>
+		<p>※ 7대 기준으로 잔여대수 여유/부족 구분 ※</p>
+		</div>
+	</div>
+	</div>	
+	<hr>	
+	<div class="w3-content w3-section" style="max-width:500px">
+		<img class="mySlidesB" src="res/img/b01.jpg" style="width:100%">
+		<img class="mySlidesB" src="res/img/b02.jpg" style="width:100%">
+		<img class="mySlidesB" src="res/img/b03.jpg" style="width:100%">
+		<img class="mySlidesB" src="res/img/b04.jpg" style="width:100%">
+		<img class="mySlidesB" src="res/img/b05.jpg" style="width:100%">
+		<img class="mySlidesB" src="res/img/b06.jpg" style="width:100%">
+	</div>
+</body>
+<script>
+//main slide show
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+
+// auto
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+<script>
+// banner
+var autoIndex = 0;
+carouselB();
+
+function carouselB() {
+    var i;
+    var x = document.getElementsByClassName("mySlidesB");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    autoIndex++;
+    if (autoIndex > x.length) {autoIndex = 1}    
+    x[autoIndex-1].style.display = "block";  
+    setTimeout(carouselB, 2000); // Change image every 2 seconds
+}
+</script>
+</html>

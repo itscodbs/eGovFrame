@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>태인이네 영화관</title>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="res/css/common.css">
+<body>
+	<!-- sidebar-->
+	<div class="w3-sidebar w3-bar-block w3-light-grey w3-card w3-animate-right" 
+		 style="display:none; right:0" id="mySidebar">
+		<button class="w3-bar-item w3-button w3-large" onclick="w3_close()"> &times;</button>
+		<a href="#" class="w3-bar-item w3-button"><i class="fa fa-fw fa-home"></i><strong>태인이네영화관</strong></a><hr>
+	  
+		<button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">영화관소개</button>
+		<div id="demoAcc" class="w3-hide w3-white w3-card">
+			<a href="01home/01.html" class="w3-bar-item w3-button">영화관소개</a>
+			<a href="01home/02.html" class="w3-bar-item w3-button">좌석배치도</a>
+			<a href="01home/03.html" class="w3-bar-item w3-button">주차장안내</a>
+	    </div>
+	
+		<button class="w3-button w3-block w3-left-align" onclick="myAccFunc2()">영화정보</button>
+		<div id="demoAcc2" class="w3-hide w3-white w3-card">
+			<a href="05movie/01.html" class="w3-bar-item w3-button">현재상영작</a>
+			<a href="05movie/02.html" class="w3-bar-item w3-button">상영시간표</a>
+			<a href="05movie/03.html" class="w3-bar-item w3-button">상영예정작</a>
+		</div>
+	  
+		<button class="w3-button w3-block w3-left-align" onclick="myAccFunc3()">영화예매</button>
+		<div id="demoAcc3" class="w3-hide w3-white w3-card">
+			<a href="03reservation/01.html" class="w3-bar-item w3-button">예매하기</a>
+			<a href="03reservation/02.html" class="w3-bar-item w3-button">예매내역</a>
+			<a href="03reservation/03.html" class="w3-bar-item w3-button">위시리스트</a>
+		</div>
+	
+		<button class="w3-button w3-block w3-left-align" onclick="myAccFunc4()">리뷰관리</button>
+		<div id="demoAcc4" class="w3-hide w3-white w3-card">
+			<a href="04review/01.html" class="w3-bar-item w3-button">리뷰조회</a>
+			<a href="04review/02.html" class="w3-bar-item w3-button">리뷰등록</a>
+			<a href="04review/03.html" class="w3-bar-item w3-button">리뷰수정</a>
+		</div>
+	</div>
+	
+	<div class="w3-container">
+	
+	<!-- logo image -->
+	<a class = "navbar-img-logo" href = "main.html">
+ 		<img src = " res/img/logo.png" width="250px">
+	</a>
+	
+	<button class="w3-button w3-white w3-xlarge w3-indigo w3-right" onclick="w3_open()">&#9776;</button>
+    
+    <!-- top menu -->
+    <div class="topmenu" align="right">
+		<a href = "02users/03.html"><i class="fa fa-address-card-o"></i> 마이페이지</a>
+		<a href = "02users/02.html"><i class="fa fa-user"></i> 로그인</a>
+		<a href = "02users/01.html"><i class="fa fa-check-square-o"></i> 회원가입</a>
+	</div><br><br><br>
+    
+    <!-- navbar menu -->
+	<div class="w3-bar w3-indigo" >
+		<a href="#" class="w3-bar-item w3-button">
+			<i class="fa fa-fw fa-home"></i>
+			<strong>태인이네영화관</strong>
+		</a>
+    
+		<div class="w3-dropdown-hover">
+			<button class="w3-button">영화관소개</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="01home/01.html" class="w3-bar-item w3-button">영화관소개</a>
+				<a href="01home/02.html" class="w3-bar-item w3-button">좌석배치도</a>
+				<a href="01home/03.html" class="w3-bar-item w3-button">주차장안내</a>
+			</div>
+		</div>
+	    
+		<div class="w3-dropdown-hover">
+			<button class="w3-button">영화정보</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="05movie/01.html" class="w3-bar-item w3-button">현재상영작</a>
+				<a href="05movie/02.html" class="w3-bar-item w3-button">상영시간표</a>
+				<a href="05movie/03.html" class="w3-bar-item w3-button">상영예정작</a>
+			</div>
+		</div>
+	    
+		<div class="w3-dropdown-hover">
+			<button class="w3-button">영화관예매</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="03reservation/01.html" class="w3-bar-item w3-button">예매하기</a>
+				<a href="03reservation/02.html" class="w3-bar-item w3-button">예매내역</a>
+				<a href="03reservation/03.html" class="w3-bar-item w3-button">위시리스트</a>
+			</div>
+		</div>
+	
+		<div class="w3-dropdown-hover">
+			<button class="w3-button">리뷰관리</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="04review/01.html" class="w3-bar-item w3-button">리뷰조회</a>
+				<a href="04review/02.html" class="w3-bar-item w3-button">리뷰등록</a>
+				<a href="04review/03.html" class="w3-bar-item w3-button">리뷰수정</a>
+			</div>
+		</div>
+	</div>
+	</div><br>
+
+
+</body>
+</html>

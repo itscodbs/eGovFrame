@@ -1,0 +1,16 @@
+package ch05.ex03.case01;
+
+public class TvMain {
+	public static void main(String[] args) {
+		Tv myTv ;
+		myTv = new Tv();
+		myTv.setChannel(7);
+		myTv.setPower(true);
+		myTv.setColor("Red");
+		
+		myTv.channelUP();
+		System.out.println("channel : " + myTv.getChannel());
+		myTv.channelDown();
+		System.out.println("channel : " + myTv.getChannel());
+	}
+}

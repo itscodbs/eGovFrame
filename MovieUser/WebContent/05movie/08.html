@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>태인이네 영화관</title>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../res/css/common.css">
+<script type="text/javascript" src="../res/js/common.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>	
+	<!-- sidebar -->
+	<div class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-right"  style="display:none; right:0" id="mySidebar">
+		<button class="w3-bar-item w3-button w3-large" onclick="w3_close()"> &times;</button>
+		<a href="#" class="w3-bar-item w3-button"><i class="fa fa-fw fa-home"></i><strong>태인이네영화관</strong></a><hr>
+	  
+		<button class="w3-button w3-block w3-left-align w3-indigo" onclick="myAccFunc()">> 영화관소개</button>
+		<div id="demoAcc" class="w3-hide w3-white w3-card">
+			<a href="../01home/01.html" class="w3-bar-item w3-button">· 영화관소개</a>
+			<a href="../01home/02.html" class="w3-bar-item w3-button">· 좌석배치도</a>
+			<a href="../01home/03.html" class="w3-bar-item w3-button">· 주차장안내</a>
+	    </div>
+	
+		<button class="w3-button w3-block w3-left-align w3-indigo" onclick="myAccFunc2()">> 영화정보</button>
+		<div id="demoAcc2" class="w3-hide w3-white w3-card">
+			<a href="../05movie/01.html" class="w3-bar-item w3-button">· 현재상영작</a>
+			<a href="../05movie/02.html" class="w3-bar-item w3-button">· 상영시간표</a>
+			<a href="../05movie/03.html" class="w3-bar-item w3-button">· 상영예정작</a>
+		</div>
+	  
+		<button class="w3-button w3-block w3-left-align w3-indigo" onclick="myAccFunc3()">> 영화예매</button>
+		<div id="demoAcc3" class="w3-hide w3-white w3-card">
+			<a href="../03reservation/01.html" class="w3-bar-item w3-button">· 예매하기</a>
+			<a href="../03reservation/02.html" class="w3-bar-item w3-button">· 예매내역</a>
+			<a href="../03reservation/03.html" class="w3-bar-item w3-button">· 위시리스트</a>
+		</div>
+	
+		<button class="w3-button w3-block w3-left-align w3-indigo" onclick="myAccFunc4()">> 리뷰관리</button>
+		<div id="demoAcc4" class="w3-hide w3-white w3-card">
+			<a href="../04review/01.html" class="w3-bar-item w3-button">· 리뷰조회</a>
+			<a href="../04review/02.html" class="w3-bar-item w3-button">· 리뷰등록</a>
+			<a href="../04review/03.html" class="w3-bar-item w3-button">· 리뷰수정</a>
+		</div>
+		
+		<div>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<p><center>Copyrightⓒ 2018 By Team Cinema.Co.Ltd. All right reserved.</center></p>
+		</div>
+	</div>
+	
+	<!-- logo image -->
+	<div class="w3-container"><br>
+	<a class = "navbar-img-logo" href = "../main.html"><img src = "../res/img/logo.png" width="150px"></a>
+	</div>
+	
+	<!-- top menu -->
+	<div class="w3-display-topright w3-text-black">
+    <br>
+    <p><a href = "../02users/03.html"><i class="fa fa-address-card-o"></i> 마이페이지</a>
+	   <a href = "../02users/02.html"><i class="fa fa-user"></i> 로그인</a>
+	   <a href = "../02users/01.html"><i class="fa fa-check-square-o"></i> 회원가입　　　　　</a></p>
+	</div>
+    
+    <button class="w3-button w3-white w3-xlarge w3-indigo w3-display-topright" onclick="w3_open()">&#9776;</button>
+    <br><br>
+     
+    <!-- navbar menu -->
+    <div class="container" style="width:100%">
+	<div class="w3-bar w3-indigo w3-padding-small w3-medium" style="max-width:100%;" >
+		<a href="../main.html" class="w3-bar-item w3-button w3-text-white">
+			<i class="fa fa-fw fa-home"></i>
+			<strong>태인이네영화관</strong>
+		</a>
+	    
+		<div class="w3-dropdown-hover">
+			<button class="w3-button"><a href="../01home/01.html" class="w3-text-white"/>영화관소개</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="../01home/01.html" class="w3-bar-item w3-button">영화관소개</a>
+				<a href="../01home/02.html" class="w3-bar-item w3-button">좌석배치도</a>
+				<a href="../01home/03.html" class="w3-bar-item w3-button">주차장안내</a>
+			</div>
+		</div>
+	    
+		<div class="w3-dropdown-hover">
+			<button class="w3-button"><a href="../05movie/01.html" class="w3-text-white"/>영화정보</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="../05movie/01.html" class="w3-bar-item w3-button">현재상영작</a>
+				<a href="../05movie/02.html" class="w3-bar-item w3-button">상영시간표</a>
+				<a href="../05movie/03.html" class="w3-bar-item w3-button">상영예정작</a>
+			</div>
+		</div>
+	    
+		<div class="w3-dropdown-hover">
+			<button class="w3-button"><a href="../03reservation/01.html" class="w3-text-white"/>영화관예매</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="../03reservation/01.html" class="w3-bar-item w3-button">예매하기</a>
+				<a href="../03reservation/02.html" class="w3-bar-item w3-button">예매내역</a>
+				<a href="../03reservation/03.html" class="w3-bar-item w3-button">위시리스트</a>
+			</div>
+		</div>
+	
+		<div class="w3-dropdown-hover">
+			<button class="w3-button"><a href="../04review/01.html" class="w3-text-white"/>리뷰관리</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="../04review/01.html" class="w3-bar-item w3-button">리뷰조회</a>
+				<a href="../04review/02.html" class="w3-bar-item w3-button">리뷰등록</a>
+				<a href="../04review/03.html" class="w3-bar-item w3-button">리뷰수정</a>
+			</div>
+		</div>
+		<a href="#" class="w3-bar-item w3-button w3-small w3-light-gray w3-right"><i class="glyphicon glyphicon-search"></i></a>
+        <input type="text" class="w3-bar-item w3-input w3-small w3-white w3-right w3-text-gray" placeholder="검색할 내용을 입력하세요.">
+	</div>
+	</div><br>
+
+	<!-- side menu -->
+	<div class="container" style="width:100%">
+    <br><br>
+    	<ul class="w3-ul w3-left" style="width:200px"><br>
+		<p class="w3-text-indigo w3-large"><b>　영화정보</b></p>
+			<li class="active">
+				<a href="../05movie/01.html">현재상영작 <i class="icon fa fa-angle-right" aria-hidden="true"></i></a>
+			</li>
+			<li class="">
+				<a href="../05movie/02.html">상영시간표	<i class="icon fa fa-angle-right" aria-hidden="true"></i></a>
+			</li>
+			<li class="">
+				<a href="../05movie/03.html">상영예정작 <i class="icon fa fa-angle-right" aria-hidden="true"></i></a>
+			</li>
+		</ul>
+    
+    <!-- 05movie content-->    
+    <h3><p><b> 　l 　영화 정보</b></p></h3>
+	
+	<div class="container" style="width:1300px">
+	<div class="w3-row-padding ">
+	<hr><br><br>
+		<div class="w3-col l3 m6 w3-margin-bottom" style="width:400px">
+			<img src="../res/img/04.jpg" alt="Mission: Impossible - Fallout, 2018" style="width:380px">
+		</div>
+		<div class="w3-col l3 m6 " style="width:800px"> 
+			<p><h3><b>미션 임파서블: 폴아웃　</b><small>Mission: Impossible - Fallout, 2018</small></h3></p><br>
+		
+		<div class="panel panel-default faq-panel" >
+		<div class="panel-heading" role="tab" id="faq-item-113">
+			<h4 class="panel-title">
+				<a role="button" data-toggle="collapse"  href="#faq-item-113-body">
+				<center><b>영화 정보 및 예매</b></center></a>
+			</h4>
+		</div>
+			
+			<div class="panel-body" >
+				<p>
+				<strong>개요</strong>　액션, 모험, 스릴러  | 한국  | 147분  | 2018.07.25  <br>
+				<strong>감독</strong>　크리스토퍼 맥쿼리<br>
+				<strong>출연</strong>　톰 크루즈(에단 헌트), 헨리 카빌(어거스트 워커), 사이먼 페그(벤지 던)<br><br>
+				<strong>예측 할 수 없는 미션. 피할 수 없는 선택</strong>
+				<p>	전 세계 최강의 스파이 기관 IMF의 최고 요원 에단 헌트(톰 크루즈)와 그의 팀은 테러조직의 핵무기 소지를 막기 위해 미션에 착수한다. <br>
+					 에단 헌트는 작전 수행 중 예상치 못한 결단을 내리게 되고, 중앙정보국 CIA는 그를 견제하기 위해 상급 요원 어거스트 워커(헨리 카빌)를 파견한다. <br>
+					 최악의 테러 위기와 라이벌의 출현 속, 팀이 행한 모든 선의의 선택들이 최악의 결과로 돌아오면서 미션은 점점 더 예측할 수 없는 상황으로 치닫게 되는데… <br>
+					  <br>
+				 	사상 가장 불가능한 미션, 피할 수 없다면 끝내야 한다!<br>
+				</p>
+			</div>
+			</div>
+			<br>
+			<button class="w3-button w3-indigo w3-block w3-right"><b>예매하기</b></button>
+		</div>
+		</div>
+		</div><br><br><br>
+		<hr><br>
+		<div class="container" >
+		<h4><p><b> 　| 　영화 리뷰 　| </b></p></h4>
+		
+		<table class="w3-table w3-bordered"  style="width:100%">
+		<colgroup>
+			<col>
+			<col width="100">
+			<col width="100">
+			<col width="100">
+		</colgroup>
+		
+		<thead> 
+			<tr class="w3-light-gray">
+				<th class="w3-center" scope="col">제목</th>
+				<th class="w3-center" scope="col">작성자</th>
+				<th class="w3-center" scope="col">날짜</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+		<tr class="w3-hover-light-blue">
+			<td class="title">
+				<a role="button" data-toggle="collapse"  href="#faq-item-112-body" >
+				<input type="checkbox"/>　미션임파서블:폴아웃 후기 </a>			
+				<div id="faq-item-112-body" class="panel-collapse collapse" role="tabpanel" >
+				<div class="panel-body">
+					<p><br>제가 한꺼번에 몰아봤던,
+							인랑, 신과함께, 미션임파서블 중에서는
+							미션임파서블을 제일 추천드려요!
+							원래 스릴러를 좋아하기도 하지만 탄탄하고 반전도 잇고!!!
+							두시간이 넘는 영화인데도 불구하고
+							지루하지 않았어요!
+							시계볼틈도 없이 시간 훅훅!!!
+							안보이신 분들 잇으시면 진짜 이제라도 영화관으로 고고!<br></p>
+				</div>
+				</div>
+			</td>
+			<td class="name">gfgf**** </td>
+			<td class="date">2018.07.31</td>
+		</tr>
+		<tr class="w3-hover-light-blue" >
+			<td class="title">
+				<a role="button" data-toggle="collapse" href="#faq-item-113-body" >
+				<input type="checkbox"/>　에단헌트라는 히어로의 탄생</a>
+				<div id="faq-item-113-body" class="panel-collapse collapse" role="tabpanel" >
+				<div class="panel-body">
+					<p><br>톰크루즈의 맨몸 액션도 중요하지만 왜 미션임파서블인지를 망각한다면 <br>
+					그저 흔하디 흔한 첩보액션영화로 전락할 것이라 생각한다. <br>
+					어쩌면 부제 Fallout이 이 시리즈의 Fall out이 아닌지 걱정이 된다.<br>
+					<br>
+					다음 시리즈부터는 레베카퍼거슨의 캐릭터가 미션임파서블의 독이 되지 않길 바라며, <br>
+					몸이 아닌 머리로 작전을 수행하는 IMF의 모습을 기대한다.<br></p>
+				</div>
+				</div>
+			</td>
+			<td class="name">gdre*** </td>
+			<td class="date">2018.07.28</td>
+		</tr>
+		<tr class="w3-hover-light-blue">
+			<td class="title">
+				<a role="button" data-toggle="collapse" href="#faq-item-114-body" >
+				<input type="checkbox"/>　미션 임파서블 폴아웃</a>
+				<div id="faq-item-114-body" class="panel-collapse collapse" role="tabpanel" >
+				<div class="panel-body">
+					<p><br>
+						실제로 액션을 했다는게 믿기지 않을만큼 몸을 영화에 다 쓰는 액션배우들을 보고  감탄을 했습니다<br>
+						그리고 톰 크루즈 같은 경우에는 촬영 하며 발목 부상도 입었다고 해요 정말 대단한 열정! <br>
+						여름이 지나가고 있지만 스릴과 모험, 액션 영화를 보고 싶다면 추천합니다!<br>
+						저는 미션 임파서블 시리즈 다 못봤는데, 꼭 정주행 해보고 싶네요 ㅎㅎ<br></p>
+				</div>
+				</div>
+			</td>
+			<td class="name">fgfd**** </td>
+			<td class="date">2018.07.26</td>
+		</tr>
+		<tr class="w3-hover-light-blue">
+			<td class="title">
+				<a role="button" data-toggle="collapse"  href="#faq-item-115-body" >
+				<input type="checkbox"/>　미션 임파서블 폴아웃을 보고</a>
+				<div id="faq-item-115-body" class="panel-collapse collapse" role="tabpanel" >
+				<div class="panel-body">
+					<p><br>
+						이미 개봉한지 좀 되서 시간표가 많이 줄어들었는데 운좋게 보게되었습니다.<br>
+						영원한 젊은오빠, 9번의 내한으로 '톰아저씨'라는 애칭을 얻은 톰크루즈의 나이를 잊은 엄청난 액션이 보는내내<br>
+						손에 땀을 쥐게하는 액션이 이어졌습니다.<br>
+						보면 나이는 나이일뿐 톰형의 열정은 20대를 가뿐히 능가하는 것 같습니다.<br></p>
+				</div>
+				</div>
+			</td>
+			<td class="name">fyys****</td>
+			<td class="date">2018.07.25</td>
+			</tr>
+		<tr class="w3-hover-light-blue">
+			<td class="title">
+				<a role="button" data-toggle="collapse"  href="#faq-item-116-body" >
+				<input type="checkbox"/>　최고의 액션 영화!</a>
+				<div id="faq-item-116-body" class="panel-collapse collapse" role="tabpanel" >
+				<div class="panel-body">
+					<p><br>미션 시리즈는 액션이 좋아서 그런지 극장 가서 봐도 돈 아깝지는 않은 듯.<br>
+						뭔가 정체가 뻔히 보여서 반전이란 건 없었지만, 전반적으로 주인공들도 멋있고 내용도 무난했다.<br>
+						미션 처음 시작할 때 정말 재미있었던 기억 ~~!<br>
+						그래도 나이도 있는데 액션 잘하고, 미션 시리즈에 애정도 많은 톰 크루즈 ㅋ<br>
+						여주인공이 이번에 뭔가 좀 아쉽게 나온 느낌~<br>
+						저번 시리즈에서는 완전 매력적이었는데...<br>
+						같은 사람 다른 느낌은 뭐지 ㅠ.ㅠ<br>
+						전형적인 액션 영화~ 그렇지만 볼만은 했다!<br></p>
+				</div>
+				</div>
+			</td>
+			<td class="name">hgfe****</td>
+			<td class="date">2018.07.26</td>
+		</tr>
+		<tr class="w3-hover-light-blue">
+			<td class="title">
+				<a role="button" data-toggle="collapse"  href="#faq-item-117-body" >
+				<input type="checkbox"/>　[미션 임파서블: 폴아웃] 리뷰</a>
+				<div id="faq-item-117-body" class="panel-collapse collapse" role="tabpanel" >
+				<div class="panel-body">
+					<p><br>저는 이 영화를 본지 얼마 안됬지만 그만큼 너무 재미있어요..!<br>
+					아직도 내용이 생생하게 기억이 나고 너무재미있어요!!<br>
+					진짜로 안보신분들 추천드립니다.<br>
+					하지만 이 영화를 보시고 재미없으신 분들도 있을것같은데..<br>
+					저는 정말로 재미있게 봐서 추천드려요..!!<br></p>
+				</div>
+				</div>
+			</td>
+			<td class="name">refj****</td>
+			<td class="date">2018.07.25</td>
+		</tr>
+		</tbody>
+		<br><br><br>
+		</table><br><br>
+		
+		<button type="button" class="btn btn-default" value="목록" ><a href="../05movie/01.html">목록</a></button>
+		<button type="button" class="btn btn-default" value="삭제하기" ><a href="../04review/02.html">리뷰쓰기</a></button>
+		<br>
+		<center><ul class="pagination">
+			<li><a href="#">1</a></li>
+		    <li><a href="#">2</a></li>
+		    <li><a href="#">3</a></li>
+		    <li><a href="#">4</a></li>
+		    <li><a href="#">5</a></li>
+		</ul></center>
+    </div>
+    </div>
+    
+</body>
+<footer><hr>	
+	<div class="w3-content w3-section" style="max-width:500px">
+		<img class="mySlidesB" src="../res/img/b01.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b02.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b03.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b04.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b05.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b06.jpg" style="width:100%">
+	</div>
+</footer>
+<script>
+// banner
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlidesB");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = "icon" href = "../res/img/icon.png">
+<title>태인이네 영화관</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+<style type = "text/css">
+		
+img.wp-smiley, img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+
+<link rel = 'stylesheet' id = 'page-user-mypage-css'  href = 'http://ganghwa.scinema.org/wp-content/themes/scinema/lib/dist/css/pages/user/mypage.css?ver = 4.9.3' type = 'text/css' media = 'all' />
+<link rel = 'stylesheet' id = 'page-user-mypage-change-myinfo-css'  href = 'http://ganghwa.scinema.org/wp-content/themes/scinema/lib/dist/css/pages/user/mypage-change-myinfo.css?ver = 4.9.3' type = 'text/css' media = 'all' />
+<link rel = 'stylesheet' id = 'pb-main-css'  href = 'http://ganghwa.scinema.org/wp-content/themes/scinema/lib/dist/css/pb-main.css?ver = 4.9.3' type = 'text/css' media = 'all' />
+<link rel = 'stylesheet' id = 'pb-child-theme-css'  href = 'http://ganghwa.scinema.org/skins.css?ver = 4.9.3' type = 'text/css' media = 'all' />
+
+
+</head>
+
+<body class = "blog logged-in header-white-fixed with-sidemenu with-breadcrumb skin-header-type004 skin-footer-type001 skin-homepage-type006 skin-sidewidget-default">
+<div class = "pb-responsive-var">
+	<div class = "xs"></div><div class = "sm"></div><div class = "md"></div><div class = "lg"></div>
+</div>
+	<!-- MENU (login)-->
+	<nav class="navbar navbar-transparent navbar-fixed-top header-navbar white-fixed" id="pb-header">
+		<div class="type003-header-frame">
+			<div class="top-menu-frame">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#pb-mainnavbar" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">MENU</span> <span class="icon-bar"></span>
+							<span class="icon-bar"></span> <span class="icon-bar"></span>
+						</button>
+						<a class = "navbar-img-logo" href = "../main.html">
+		 					<img src = "../res/img/logo.png">
+		 				</a>
+					</div>
+					
+					<ul class = "top-menu-list hidden-xs">
+						<li class = "menu-item"><a href = "../02users/03.html">마이페이지</a></li>
+						<li class = "menu-item"><a href = "../02users/02.html">로그인</a></li>
+						<li class = "menu-item"><a href = "../02users/01.html">회원가입</a></li>
+					</ul>
+				</div>
+			</div>
+			
+		<!-- MENU(movie)  -->
+		<div class = "bottom-menu-frame">
+			<div class = "container">
+  				<div id = "pb-mainnavbar" class = "collapse navbar-collapse navbar-right">
+			 		<ul id = "pb-header-mainmenu-item" class = "nav navbar-nav menu">
+			 
+					<li id="menu-item-1" class="menu-item menu-item-type-introduction menu-item-object- menu-item-has-children menu-item-1 current-menu-item">
+					<a href="../01home/01.html">영화관소개</a>
+					<ul class="sub-menu">
+						<li id="menu-item-2" class="menu-item menu-item-type-introduction menu-item-object- menu-item-2 current-menu-item">
+							<a href="../01home/01.html">영화관소개</a></li>
+						<li id="menu-item-3" class="menu-item menu-item-type-seattable menu-item-object- menu-item-3">
+							<a href="../01home/02.html">좌석배치도</a></li>
+						<li id="menu-item-4" class="menu-item menu-item-type-seattable menu-item-object- menu-item-4">
+							<a href="../01home/03.html">주차장안내</a></li>
+					</ul>
+				</li>
+				
+				<li id="menu-item-5" class="menu-item menu-item-type-introduction menu-item-object- menu-item-has-children menu-item-1 current-menu-item">
+				<a href="../05movie/01.html">영화정보</a>
+					<ul class="sub-menu">
+						<li id="menu-item-6" class="menu-item menu-item-type-introduction menu-item-object- menu-item-6 current-menu-item">
+							<a href="../05movie/01.html">현재상영작</a></li>
+						<li id="menu-item-7" class="menu-item menu-item-type-seattable menu-item-object- menu-item-7">
+							<a href="../05movie/02.html">상영시간표</a></li>
+						<li id="menu-item-8" class="menu-item menu-item-type-seattable menu-item-object- menu-item-8">
+							<a href="../05movie/03.html">상영예정작</a></li>	
+					</ul>
+				</li>
+				
+				<li id="menu-item-9" class="menu-item menu-item-type-screening-movies menu-item-object- menu-item-has-children menu-item-9">
+				<a href="../03reservation/01.html">영화예매</a>
+					<ul class="sub-menu">
+						<li id="menu-item-10" class="menu-item menu-item-type-screening-movies menu-item-object- menu-item-10">
+				 		<a href="../03reservation/01.html">예매하기</a>	</li>
+						<li id="menu-item-11" class="menu-item menu-item-type-movie-timetable menu-item-object- menu-item-has-children menu-item-11">
+						<a href="../03reservation/02.html">예매내역</a></li>
+				 		<li id="menu-item-12" class="menu-item menu-item-type-screening-movies menu-item-object- menu-item-12">
+				 		<a href="../03reservation/03.html">위시리스트</a></li>
+					</ul>
+				</li>
+				
+				<li id="menu-item-13" class="menu-item menu-item-type-screening-movies menu-item-object- menu-item-has-children menu-item-13">
+				<a href="../04review/01.html">리뷰관리</a>
+					<ul class="sub-menu">
+						<li id="menu-item-14" class="menu-item menu-item-type-screening-movies menu-item-object- menu-item-14">
+					 		<a href="../04review/01.html">리뷰조회</a>	</li>
+						<li id="menu-item-15" class="menu-item menu-item-type-movie-timetable menu-item-object- menu-item-has-children menu-item-15">
+							<a href="../04review/02.html">리뷰등록</a></li>
+						<li id="menu-item-16" class="menu-item menu-item-type-screening-movies menu-item-object- menu-item-16">
+					 		<a href="../04review/03.html">리뷰수정</a></li>
+					</ul>
+				</li>
+			</ul>
+		  </div>
+	  </div>
+</div>
+</div>
+</nav>
+	
+<div class = "breadcrumb-wrap">
+<div class = "breadcrumb">
+		<li class = "">
+			<a href = "#">마이페이지</a>
+		</li> 
+		<li class = "dropdown">
+			<a href = "#" data-toggle = "dropdown">내정보변경
+				<i class = "icon fa fa-angle-down" aria-hidden = "true"></i>
+			</a>
+				<ul class = "dropdown-menu">
+					<li>
+						<a href = "../02users/03.html" data-mypage-action = "change-myinfo">내정보변경</a>
+					</li>
+					<li>
+						<a href = "../02users/02.html" data-mypage-action = "logout">로그아웃</a>
+					</li>
+				</ul>
+			</li>			
+		</div>
+	</div>
+
+<div class = "body-container-wrap ">
+<div class = "sidemenu-wrap">
+		<div class = "sidemenu-item sidemenu-list-wrap">
+			<h3 class = "sidemenu-title">마이페이지</h3>
+	<ul class = "sidemenu-list">
+
+
+				<li class = "active">
+				<a href = "http://ganghwa.scinema.org/mypage/change-myinfo" data-mypage-action = "change-myinfo">
+					내정보변경					<i class = "icon fa fa-angle-right" aria-hidden = "true"></i>
+				</a>
+			</li>
+					<li class = "">
+				<a href = "http://ganghwa.scinema.org/logout" data-mypage-action = "logout">
+					로그아웃					<i class = "icon fa fa-angle-right" aria-hidden = "true"></i>
+				</a>
+			</li>
+		 </ul>
+
+</div>
+</div>
+
+<div class = "container-fluid body-container"><div class = "page-mypage-change-myinfo-frame"><form id = "pb-user-change-myinfo-form" class = "user-change-myinfo-form pb-border-form" autocomplete = "off">
+
+	<div class = "panel panel-default"><div class = "panel-body">
+
+	<div class = "form-group">
+		<label class = "col-sm-2 control-label">아이디</label>
+		<div class = "col-sm-10">
+			<p class = "form-control-static">movie123</p>
+			<div class = "clearfix"></div>
+		</div>
+	</div>
+	
+	<div class = "form-group">
+		<label class = "col-sm-2 control-label">이메일</label>
+		<div class = "col-sm-10">
+			<p class = "form-control-static">movie123@moviebox.com</p>
+			<div class = "clearfix"></div>
+		</div>
+	</div>
+	
+	<div class = "form-group">
+		<label class = "col-sm-2 control-label" for = "pb-user-change-myinfo-form-user-pass">비밀번호</label>
+		<div class = "col-sm-10 col-xs-12">
+			<a href = "#" class = "btn btn-default" data-toggle = "modal" data-target = "#pb-user-change-pass-modal">비밀번호변경</a>
+		</div>		
+	</div>	
+
+	<div class = "form-div-border"></div>
+		<input type = "hidden" name = "need_auth_myself" value = "N">
+
+		<div class = "form-group" >
+			<label class = "col-sm-2 col-xs-12 control-label" for = "pb-user-change-myinfo-form-full_name">이름</label>
+			<div class = "col-sm-10 col-xs-12 ">
+				<input type = "text" class = "form-control" id = "pb-user-change-myinfo-form-full_name" placeholder = "이름 입력" name = "full_name" required data-error = "이름을 입력하세요" value = "남궁영화">
+				<div class = "help-block with-errors"></div>
+				<div class = "clearfix"></div>
+			</div>
+			
+		</div>
+
+		<div class = "form-group" >
+			<label class = "col-sm-2 col-xs-12 control-label" >성별</label>
+			<div class = "col-sm-10 col-xs-12 ">
+				<label class = "radio-inline ">
+					<input type = "radio" name = "gender" id = "pb-user-change-myinfo-form-gender-00001" value = "00001" required data-error = "성별을 선택하세요"  > 남자
+				</label>
+				<label class = "radio-inline ">
+					<input type = "radio" name = "gender" id = "pb-user-change-myinfo-form-gender-00003" value = "00003" required data-error = "성별을 선택하세요"  checked = 'checked' checked = 'checked' > 여자
+				</label>
+				<div class = "help-block with-errors"></div>
+				<div class = "clearfix"></div>
+			</div>
+		</div>
+
+		<div class = "form-group" >
+			<label class = "col-sm-2 col-xs-12 control-label" for = "pb-user-change-myinfo-form-birth_yyyymmdd">생년월일</label>
+			<div class = "col-sm-10 col-xs-12 ">
+				<div class = 'input-group date' id = 'pb-user-change-myinfo-form-birth_yyyymmdd-wrap'>
+					<input type = "text" class = "form-control" id = "pb-user-change-myinfo-form-birth_yyyymmdd" placeholder = "생년월일 입력" name = "birth_yyyymmdd" required data-error = "생년월일을 입력하세요" value = "20001221">
+					<span class = "input-group-addon">
+						<span class = "glyphicon glyphicon-calendar"></span>
+					</span>
+				</div>
+				
+				<div class = "help-block with-errors"></div>
+				<div class = "clearfix"></div>
+			</div>
+			
+		</div>
+
+		<div class = "form-group" >
+			<label class = "col-sm-2 col-xs-12 control-label" >휴대전화</label>
+			<div class  =  "col-sm-2 col-xs-4 col-sm-phone">
+						<select class  =  "form-control" name  =  "phone1_1" data-error  =  "앞자리를 선택하세요" required id  =  "pb-user-signup-form-phone1_1">
+							<option value  =  "">-앞자리-</option>
+									<option value  =  "010" data-col1  =  "" data-col2  =  "" data-col3  =  "" data-col4  =  "">010</option>
+									<option value  =  "011" data-col1  =  "" data-col2  =  "" data-col3  =  "" data-col4  =  "">011</option>
+									<option value  =  "016" data-col1  =  "" data-col2  =  "" data-col3  =  "" data-col4  =  "">016</option>
+									<option value  =  "017" data-col1  =  "" data-col2  =  ""	data-col3  =  "" data-col4  =  "">017</option>
+									<option value  =  "019" data-col1  =  "" data-col2  =  "" data-col3  =  "" data-col4  =  "">019</option>
+						</select>
+					</div>
+					
+			<div class = "col-sm-4 col-xs-4 col-sm-phone">
+				<input type = "number" name = "phone1_2" class = "form-control" maxlength = "4" data-error = "중간자리를 입력하세요" required id = "pb-user-change-myinfo-form-phone1_2" value = "1234">
+			</div>
+			<div class = "col-sm-4 col-xs-4">
+				<input type = "number" name = "phone1_3" class = "form-control" maxlength = "4" data-error = "마지막자리를 입력하세요" required id = "pb-user-change-myinfo-form-phone1_2" value = "5678">
+			</div>
+			<div class = "col-sm-10 col-xs-12 col-xs-offset-0 col-sm-offset-2">
+				<div class = "help-block with-errors"></div>
+				<div class = "clearfix"></div>
+			</div>
+
+		</div>
+		
+		<div class = "form-div-border"></div>	
+
+	<div class = "form-group">
+		<label class = "col-sm-2 col-xs-12 control-label" >홍보수신</label>
+		<div class = "col-sm-10 col-xs-12 ">
+			<label class = "checkbox-inline "><input type = "checkbox" name = "mailing_recv_yn" value = "Y"  checked = 'checked' checked = 'checked' > 이메일 수신동의</label>
+			<label class = "checkbox-inline"><input type = "checkbox" name = "sms_recv_yn" value = "Y"  > SMS 수신동의</label>
+			<small class = "help-block">*필수정보 및 공지사항은 수신될 수 있습니다.</small>
+		</div>
+	</div>
+
+	</div></div>		
+
+	<div class = "form-margin"></div>
+	
+	<div class = "row">
+		<div class = "col-xs-5">
+			<a href = "#" class = "text-danger" data-toggle = "modal" data-target = "#pb-user-leave-modal">회원탈퇴하기</a>
+		</div>
+		<div class = "col-xs-7">
+			<div class = "text-right">
+				<button type = "button" class = "btn btn-lg btn-primary">회원정보수정</button>
+			</div>
+		</div>
+	</div>
+	
+	
+</form></div>
+
+<div class = "modal fade " tabindex = "-1" role = "dialog" id = "pb-user-change-pass-modal">
+	<div class = "modal-dialog " role = "document"><div class = "modal-content">
+		<div class = "modal-header">
+			<button type = "button" class = "close" data-dismiss = "modal" aria-label = "Close"><span aria-hidden = "true">&times;</span></button>
+			<h4 class = "modal-title">비밀번호변경</h4>
+		</div>
+		<div class = "modal-body"><form id = "pb-user-change-pass-form" class = "user-change-pass-form pb-border-form" >
+			
+			<div class = "form-group" >
+				<label class = "col-sm-3 col-xs-12 control-label" for = "pb-user-change-pass-form-current-pass">기존 비밀번호</label>
+				<div class = "col-sm-9 col-xs-12 ">
+					<input type = "password" class = "form-control" id = "pb-user-change-pass-form-current-pass" placeholder = "기존 비밀번호 입력" name = "current_pass" required data-error = "기존 비밀번호를 입력하세요" >
+					<p class = "help-block"><small>비밀번호 변경을 위해서 기존 비밀번호입력이 필요합니다.</small></p>
+					<div class = "clearfix"></div>
+				</div>
+			</div>
+			<div class = "form-div-border"></div>
+
+			<div class = "form-group" >
+				<label class = "col-sm-3 col-xs-12 control-label" for = "pb-user-change-pass-form-new-pass">새로운 비밀번호</label>
+				<div class = "col-sm-9 col-xs-12 ">
+					<input type = "password" class = "form-control" id = "pb-user-change-pass-form-new-pass" placeholder = "새로운 비밀번호 입력" name = "new_pass" required data-error = "새로운 비밀번호를 입력하세요" >
+					<div class = "help-block with-errors"></div>
+					<div class = "clearfix"></div>
+				</div>
+			</div>
+			<div class = "form-group" >
+				<div class = "col-sm-9 col-xs-12 col-sm-offset-3 col-xs-offset-0 ">
+					<input type = "password" class = "form-control" id = "pb-user-change-pass-form-new-pass-c" placeholder = "비밀번호 다시입력" name = "new_pass_c" required data-match = "#pb-user-change-pass-form-new-pass" data-error = "비밀번호를 확인하세요">
+					<div class = "help-block with-errors"></div>
+					<div class = "clearfix"></div>
+				</div>
+			</div>
+			
+			<div class = "form-div-border"></div>
+
+			<div class = "form-margin-xs"></div>
+
+			<button type = "submit" class = "btn btn-primary btn-block btn-lg">변경하기</button>
+
+		</form></div>
+		
+	</div></div>
+</div>
+
+<div class = "modal fade " tabindex = "-1" role = "dialog" id = "pb-user-change-myinfo-pass-modal">
+	<div class = "modal-dialog " role = "document"><div class = "modal-content">
+		<div class = "modal-header">
+			<button type = "button" class = "close" data-dismiss = "modal" aria-label = "Close"><span aria-hidden = "true">&times;</span></button>
+			<h4 class = "modal-title">비밀번호입력</h4>
+		</div>
+		<div class = "modal-body"><form id = "pb-user-change-myinfo-pass-form" class = "user-change-myinfo-pass-form pb-border-form" >
+			
+			<div class = "form-group" ><div class = "col-xs-12">
+				<div class = "input-with-icon">
+					<input type = "password" class = "form-control" id = "pb-user-change-myinfo-pass-form-user-pass" placeholder = "비밀번호 입력" name = "user_pass" required data-error = "비밀번호를 입력하세요" >
+					<label for = "pb-user-change-myinfo-pass-form-user-pass" class = "icon fa fa-lock"></label>
+				</div>
+			
+				<p class = "help-block text-center"><small>회원정보 변경을 위해서 <br class = "visible-xs" />비밀번호 입력이 필요합니다</small></p>
+				<div class = "clearfix"></div>
+			</div></div>
+			<div class = "form-div-border"></div>
+			
+			<div class = "form-margin-xs"></div>
+			<button type = "submit" class = "btn btn-primary btn-block btn-lg">변경하기</button>
+
+		</form></div>
+		
+	</div></div>
+</div>
+
+<div class = "modal fade " tabindex = "-1" role = "dialog" id = "pb-user-leave-modal">
+	<div class = "modal-dialog " role = "document"><div class = "modal-content">
+		<div class = "modal-header">
+			<button type = "button" class = "close" data-dismiss = "modal" aria-label = "Close"><span aria-hidden = "true">&times;</span></button>
+			<h4 class = "modal-title">회원탈퇴</h4>
+		</div>
+		<div class = "modal-body"><form id = "pb-user-leave-form" class = "user-leave-form pb-border-form" data-home-url = "http://ganghwa.scinema.org">
+			
+			<h5>보유정보폐기동의</h5>
+			<div class = "agreement-box">
+				가입 시, 기입한 모든 정보(이메일,이름,연락처 등)가 폐기됩니다.
+			</div>
+			<div class = "form-group"><div class = "col-xs-12"><div class = "checkbox with-top text-right">
+				<label><input type = "checkbox" name = "agreement01" required data-error = "보유정보폐기 동의가 필요합니다"> 보유정보폐기에 동의합니다.</label>
+				<div class = "help-block with-errors"></div>
+				<div class = "clearfix"></div>
+			</div></div></div>
+			<div class = "form-div-border"></div>
+
+			<div class = "form-group" ><div class = "col-xs-12">
+				<div class = "input-with-icon">
+					<input type = "password" class = "form-control" id = "pb-user-change-myinfo-pass-form-user-pass" placeholder = "비밀번호 입력" name = "user_pass" required data-error = "비밀번호를 입력하세요" >
+					<label for = "pb-user-change-myinfo-pass-form-user-pass" class = "icon fa fa-lock"></label>
+				</div>
+			
+				<p class = "help-block text-center"><small>회원탈퇴를 위해서 <br class = "visible-xs" />비밀번호 입력하여 주세요</small></p>
+				<div class = "clearfix"></div>
+			</div></div>
+			<div class = "form-div-border"></div>
+			
+			<div class = "form-margin-xs"></div>
+			<button type = "submit" class = "btn btn-black btn-block btn-lg">탈퇴하기</button>
+
+		</form></div>
+		
+	</div></div>
+</div>
+	<div class = "footer-banner-frame">
+		<div class = "swiper-container footer-banner-slider" id = "pb-footer-banner-slider">
+			<div class = "swiper-wrapper">
+									<div class = "swiper-slide">
+						<a href = "http://ganghwa.scinema.org/movie-timetable" class = "banner-link-item">
+							<img src = "http://scinema.org/wp-content/uploads/2018/07%EC%9D%B8%EB%9E%91_%EC%9E%91%EC%9D%80%EC%98%81%ED%99%94%EA%B4%80_960_120.jpg" alt = "" class = "banner-image">
+						</a>
+					</div>
+									<div class = "swiper-slide">
+						<a href = "http://ganghwa.scinema.org/movie-timetable" class = "banner-link-item">
+							<img src = "http://scinema.org/wp-content/uploads/2018/07%EB%AA%AC%EC%8A%A4%ED%84%B0%ED%98%B8%ED%85%943_960x120.jpg" alt = "" class = "banner-image">
+						</a>
+					</div>
+									<div class = "swiper-slide">
+						<a href = "http://ganghwa.scinema.org/movie-timetable" class = "banner-link-item">
+							<img src = "http://scinema.org/wp-content/uploads/2018/07%EC%8B%A0%EB%B9%84_%EC%98%88%EB%A7%A4%EB%B0%B0%EB%84%88_960x120.jpg" alt = "" class = "banner-image">
+						</a>
+					</div>
+									<div class = "swiper-slide">
+						<a href = "http://ganghwa.scinema.org/movie-timetable" class = "banner-link-item">
+							<img src = "http://scinema.org/wp-content/uploads/2018/07%EB%AF%B8%EC%85%986.jpg" alt = "" class = "banner-image">
+						</a>
+					</div>
+									<div class = "swiper-slide">
+						<a href = "http://ganghwa.scinema.org/movie-timetable" class = "banner-link-item">
+							<img src = "http://scinema.org/wp-content/uploads/2018/07%EC%8B%A02.jpg" alt = "" class = "banner-image">
+						</a>
+					</div>
+									<div class = "swiper-slide">
+						<a href = "http://ganghwa.scinema.org/movie-timetable" class = "banner-link-item">
+							<img src = "http://scinema.org/wp-content/uploads/2018/07%EA%B3%B5%EC%9E%91_960x120_v2.jpg" alt = "" class = "banner-image">
+						</a>
+					</div>
+									<div class = "swiper-slide">
+						<a href = "http://ganghwa.scinema.org/movie-timetable" class = "banner-link-item">
+							<img src = "http://scinema.org/wp-content/uploads/2018/07%EB%AA%A9%EA%B2%A9%EC%9E%90_%EC%9E%91%EC%9D%80%EC%98%81%ED%99%94%EA%B4%80_960x120%20%281%29.jpg" alt = "" class = "banner-image">
+						</a>
+					</div>
+									<div class = "swiper-slide">
+						<a href = "http://ganghwa.scinema.org/movie-timetable" class = "banner-link-item">
+							<img src = "http://scinema.org/wp-content/uploads/2018/07%EB%A7%98%EB%A7%88%EB%AF%B8%EC%95%842_%EC%9E%91%EC%9D%80%EC%98%81%ED%99%94%EA%B4%80_960x120.jpg" alt = "" class = "banner-image">
+						</a>
+					</div>
+							</div>
+		</div>
+	</div>
+	<script type = "text/javascript">
+	jQuery(document).ready(function($){
+		$("#pb-footer-banner-slider").swiper({
+			autoplayDisableOnInteraction : false,
+			autoplay : 3000,
+			loop: true,
+			effect : "fade"
+		});
+	});
+	</script>
+
+	</div></div>
+
+<script type = "text/javascript">
+jQuery(document).ready(function(){
+
+	
+});
+</script>
+<script type = 'text/javascript' src = 'http://ganghwa.scinema.org/wp-includes/js/wp-embed.min.js?ver = 4.9.3'></script>
+</body>
+</html>

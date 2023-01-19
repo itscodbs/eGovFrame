@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+
+baby{
+	background-color : #09280B;	
+}
+
+@font-face{
+	font-family : myBand;
+	src : url('../img/Band.eot');
+	src : url('../img/Band.otf') format('truetype');
+	src : url('../img/Band.woff') format('woff'); 
+}
+
+h1{
+	font-family : myBand;
+	font-size : 3em;
+	color : yellow;
+}

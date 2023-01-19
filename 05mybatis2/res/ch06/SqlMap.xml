@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ch06.Mapper">
+	<resultMap id ="userMap" type="ch06.User">
+		<id property="userId" column="user_id"/>
+		<result property="userName" column="user_name"/>
+		<result property="regDate" column="reg_date"/>
+	</resultMap>
+	
+	<sql id="selectUser">
+		select user_id, user_name, reg_date 
+		from users
+	</sql>
+	
+	<select id="getUsers" parameterType="ch06.Search" resultMap="userMap">
+		<include refid = "selectUser"/>
+		<where>
+			<if test = "userIds != null">
+				user_id in
+				<foreach item="userId" collection="userIds" open="(" separator="," close=")">
+					#{userId}
+				</foreach>
+			</if>
+			<if test="userNames != null">
+				and user_name in
+				<foreach item="userName" collection="userNames" open="(" separator="," close=")"> 
+					#{userName}
+				</foreach>  
+			</if>
+		</where>
+	</select>
+	
+	<select id = "getUsers2" resultMap="userMap">
+		<include refid = "selectUser"/>
+		where user_id in
+		<foreach item="userId" collection="array" open="(" separator="," close=")">
+			#{userId}
+		</foreach>
+	</select>
+	
+		<select id = "getUsers3" resultMap="userMap">
+		<include refid = "selectUser"/>
+		where user_name in
+		<foreach item="userName" collection="list" open="(" separator="," close=")">
+			#{userName}
+		</foreach>
+	</select>	
+</mapper>

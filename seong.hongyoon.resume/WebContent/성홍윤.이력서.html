@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이력서</title>
+<style>
+header{
+	text-align : center;
+	font-size : 20px;
+}
+
+caption{
+ 	text-align: left;
+}
+
+table{
+	width : 800px;
+	margin : auto;
+	border : 1px solid black;
+	border-collapse : collapse;	
+}
+
+#personal th{
+	text-align: center;
+	font-weight : bold;
+	width : 10%;
+	border : 1px solid black;
+	padding : 3px;
+}
+
+#educational th{
+	text-align: center;
+	font-weight : bold;
+	background-color : lightgray;
+	border : 1px solid black;
+	padding : 3px;        
+}
+
+#certification th{
+ 	text-align: center;
+ 	font-weight : bold;
+	background-color : lightgray;
+	border : 1px solid black;
+	padding : 3px;
+}
+
+td{
+	text-align: center;
+	border : 1px solid black;
+	padding : 5px;
+}
+
+#image{
+	align : center;
+    padding : 3px;
+}
+
+</style>
+</head>
+<body>
+	<header><h1>이 력 서</h1></header>
+	<br>
+	<table id = "personal">
+	<caption><h3>1. 인적사항</h3></caption>
+		<tr>
+			<th rowspan = "2" align = "center">성명</th>
+			<th>한글</th>
+			<td>성홍윤</td>
+			<th>생년월일</th>
+			<td>1995.05.23</td>
+			<td rowspan = "4"><div id = "image"><img src="resume.gif" alt = "저장되지 않은 이미지입니다."></div></td>
+		</tr>
+		<tr>
+			<th>영문</th>
+			<td>SEONG HONG YOON</td>
+			<th>홈페이지</th>
+			<td>http://hong.com</td>
+		</tr>
+		<tr>
+			<th>연락처</th>
+			<th>휴대폰</th>
+			<td>010-1234-5678</td>
+			<th>e-mail</th>
+			<td>dbs2_@naver.com</td>
+		</tr>
+		<tr>
+			<th>주소</th>
+			<td colspan = "4" align = "center">서울특별시 서초구 반포대로 275 래미안퍼스티지 2동 2012호</td>
+		</tr>
+	</table>
+	
+	<table id = "educational" >
+	<caption><h3>2. 학력사항</h3></caption>
+		<th>학교명</th>
+		<th>전공</th>
+		<th>입학일자</th>
+     	<th>졸업일자</th>
+		<th>졸업구분</th>
+		<th>소재지</th>
+		<tr>
+			<td>파리10대학</td>
+			<td>경제학</td>
+			<td>2005. 3. 3</td>
+			<td>2010. 2. 20</td>
+			<td>
+			    <label><input type = radio name = "choose" value = "졸업" checked="checked" />졸업</label> 
+			    <label><input type = radio name = "choose" value = "예정"/>예정</label>
+			</td>
+			<td>프랑스</td>
+		</tr>  
+		<tr>             
+			<td>서울대학교</td> 
+			<td>국사학</td>
+			<td>2000. 3. 3</td> 
+			<td>2005. 2. 25</td>
+			<td>
+			    <label><input type = radio name = "choose2" value = "졸업" checked="checked" />졸업</label> 
+			    <label><input type = radio name = "choose2" value = "예정" />예정</label>
+			</td>
+			<td>대한민국</td>
+		</tr>			    
+	</table>
+	
+	<table id ="certification">
+	<caption><h3>3. 자격사항</h3></caption>
+		<th>자격증명</th>
+		<th>등 급</th>
+		<th>취득일</th>
+		<th>발급기관</th>
+		<tr>
+			<td>정보처리기사</td>
+			<td></td>
+			<td>2018. 5. 30</td>
+			<td>한국산업인력공단</td>
+		</tr>
+		<tr>
+			<td>OCP</td>
+			<td></td>
+			<td>2018. 5. 23</td>
+			<td>ORACLE</td>
+		</tr>						
+	</table>
+</body>
+</html>

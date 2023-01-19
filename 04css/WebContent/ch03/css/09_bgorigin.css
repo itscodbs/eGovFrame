@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+
+div{
+	width : 400px;
+	padding : 20px;
+	margin : 5px;
+	border : 15px solid skyblue;
+	border-radius : 20px;
+	background-image : url(../img/bg2.png); 
+	background-repeat : no-repeat;
+	background-position : right bottom; 
+}
+
+.intro1{
+	background-origin : border-box;
+}
+
+.intro2{
+	background-prigin : padding-box;
+}
+
+.intro3{
+	background-content : content-box;
+}

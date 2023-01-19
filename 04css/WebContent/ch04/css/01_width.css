@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+p{
+	padding : 10px;
+	margin : 15px 5px;
+	border : 2px dotted blue;
+}
+
+p.size1{
+	width : 400px;
+	height : 50px;
+}
+
+p.size2{
+	width : 50%;
+	height : 50ox;
+}

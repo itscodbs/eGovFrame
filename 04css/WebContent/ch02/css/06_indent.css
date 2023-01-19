@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+#indent1{
+	text-indent : 10px;
+}
+
+#indent2{
+	text-indent : 50px;
+}
+
+#indent3{
+	text-indent : 90ox;
+}
+
+p{
+	border : 1px solid black;
+	padding : 10px;
+	margin-bottom : 10px;
+	margin-right : 10px;
+}

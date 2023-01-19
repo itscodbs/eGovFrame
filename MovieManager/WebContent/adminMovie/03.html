@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>태인이네영화관(관리자)-리뷰관리/영화선택</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style>
+@import "../res/css/Menu.css";
+#formsearch{
+	float: right;
+}
+#ok{
+	float: right;	
+}
+#current{
+	text-align:center;
+}
+#reviewMovie{
+	text-decoration: none;
+}
+</style>
+<div class="container">
+	<br>
+	<div id="logo">
+		<a href="../adminMain/01.html">
+		<img src="../res/img/logo.png" width="200" height="50" alt="logo" />
+		</a>
+	</div>
+	<br>
+	<div id="info">
+	  	<p>admin님, 로그인을 환영합니다.
+		<button type="button" class="btn btn-danger" onclick="location.href='../adminLogin/01.html'">로그아웃</button>
+		<button type="button" class="btn btn-success" onclick="location.href='사용자페이지.html'">사용자페이지</button></p>
+	</div>
+	<div class="btn-group btn-group-justified">
+		<div class="btn-group">
+			<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+			회원관리 <span class="caret"></span></button>
+			<ul class="dropdown-menu">
+				<li><a href="../adminUser/01.html">회원관리</a></li>
+				<li><a href="../adminUser/02.html">직원관리</a></li>
+			</ul>
+		</div>
+		<div class="btn-group">
+			<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+			영화관리 <span class="caret"></span></button>
+			<ul class="dropdown-menu">
+				<li><a href="01.html">영화등록</a></li>
+				<li><a href="02.html">영화수정/삭제</a></li>
+				<li><a href="03.html">리뷰관리</a></li>
+				<li><a href="05.html">신고관리</a></li>
+			</ul>
+		</div>
+		<div class="btn-group">
+			<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+			극장관리 <span class="caret"></span></button>
+			<ul class="dropdown-menu">
+				<li><a href="../adminCinema/01.html">극장등록</a></li>
+				<li><a href="../adminCinema/02.html">극장수정/삭제</a></li>
+				<li><a href="../adminCinema/03.html">영화등록</a></li>
+				<li><a href="../adminCinema/05.html">영화수정/삭제</a></li>
+			</ul>
+		</div>
+		<div class="btn-group">
+			<button type="button" class="btn btn-primary" onclick="location.href='../adminReservation/01.html'">예매관리</button>
+		</div>
+		<div class="btn-group">
+			<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+			매출관리 <span class="caret"></span></button>
+			<ul class="dropdown-menu">
+				<li><a href="../adminSales/01.html">기간별</a></li>
+				<li><a href="../adminSales/02.html">영화별</a></li>
+				<li><a href="../adminSales/03.html">극장별</a></li>
+			</ul>
+		</div>
+		<div class="btn-group">
+			<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+			통계관리 <span class="caret"></span></button>
+			<ul class="dropdown-menu">
+				<li><a href="../adminStatistics/01.html">성별</a></li>
+				<li><a href="../adminStatistics/02.html">지역별</a></li>
+				<li><a href="../adminStatistics/03.html">연령별</a></li>
+				<li><a href="../adminStatistics/04.html">시간별</a></li>
+				<li><a href="../adminStatistics/05.html">영화별</a></li>
+				<li><a href="../adminStatistics/06.html">회원비율</a></li>
+				<li><a href="../adminStatistics/07.html">평점</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</head>
+<body>
+<div class="container">
+<br>
+	<h2>▶리뷰관리 영화선택</h2>
+<form id ="formsearch" class="form-inline">
+	<div class="form-group">
+		<label for="ex">보기 &nbsp;</label>
+			<select class="form-control" id="ex">
+				<option>10개씩</option>
+				<option>30개씩</option>
+				<option>50개씩</option>
+				<option>100개씩</option>
+				<option>300개씩</option>
+				<option>500개씩</option>
+			</select>
+	</div>
+	<div class="form-group">
+		<label for="moviePart">&nbsp;구분:&nbsp;</label>
+		<select class="form-control" id="moviePart">
+			<option>전체</option>
+			<option>번호</option>
+			<option>제목</option>
+			<option>감독</option>
+			<option>장르</option>
+			<option>등급</option>
+			<option>개봉일</option>
+			<option>국가</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<label for="search"> &nbsp;내용:&nbsp;</label>
+		<input type="text" class="form-control" id="search" placeholder="내용을 입력하세요.">
+	</div>
+	<button type="submit" class="btn btn-default">검색</button>
+</form>
+<tbody>
+<form>
+	<br><br>
+	<table class="table table-hover">
+		<tr class="info">
+			<th>번호</th>
+			<th>제목</th>
+			<th>감독</th>
+			<th>장르</th>
+			<th>등급</th>
+			<th>개봉일</th>
+			<th>국가</th>
+		</tr>
+		<tr>
+			<td><div class="radio-inline">
+			<label><input type="radio" name="optradio" value="1">1</label>
+			</div></td>
+			<td><a id="reviewMovie" href="04.html">병곤의 하루</a></td>
+			<td>김병곤</td>
+			<td>멜로</td>
+			<td>19</td>
+			<td>2018.08.18</td>
+			<td>KO</td>
+		</tr>
+		<tr>
+			<td><div class="radio-inline">
+			<label><input type="radio" name="optradio" value="2">2</label>
+			</div></td>
+			<td><a id="reviewMovie" href="04.html">병곤의 하루</a></td>
+			<td>김병곤</td>
+			<td>멜로</td>
+			<td>19</td>
+			<td>2018.08.18</td>
+			<td>KO</td>
+		</tr>
+		<tr>
+			<td><div class="radio-inline">
+			<label><input type="radio" name="optradio" value="3">3</label>
+			</div></td>
+			<td><a id="reviewMovie" href="04.html">병곤의 하루</a></td>
+			<td>김병곤</td>
+			<td>멜로</td>
+			<td>19</td>
+			<td>2018.08.18</td>
+			<td>KO</td>
+		</tr>	
+		<tr>
+			<td><div class="radio-inline">
+			<label><input type="radio" name="optradio" value="4">4</label>
+			</div></td>
+			<td><a id="reviewMovie" href="04.html">병곤의 하루</a></td>
+			<td>김병곤</td>
+			<td>멜로</td>
+			<td>19</td>
+			<td>2018.08.18</td>
+			<td>IN</td>
+		</tr>	
+		<tr>
+			<td><div class="radio-inline">
+			<label><input type="radio" name="optradio" value="5">5</label>
+			</div></td>
+			<td><a id="reviewMovie" href="04.html">병곤의 하루</a></td>
+			<td>김병곤</td>
+			<td>멜로</td>
+			<td>19</td>
+			<td>2018.08.18</td>
+			<td>JA</td>
+		</tr>
+	</table>
+	<div id="current">
+		<ul	class="pagination">
+			<li class="active"><a href="#">1</a></li>	
+			<li><a href="#">2</a></li>	
+			<li><a href="#">3</a></li>	
+			<li><a href="#">4</a></li>	
+			<li><a href="#">5</a></li>	
+			<li><a href="#">6</a></li>	
+			<li><a href="#">7</a></li>	
+			<li><a href="#">8</a></li>	
+			<li><a href="#">9</a></li>	
+			<li><a href="#">10</a></li>	
+			<li><a href="#">≫</a></li>	
+		</ul>
+	</div>
+	<div id="ok">
+		<button type="button" id="ok" class="btn btn-success" onclick="location.href='../adminMovie/04.html'">선택</button>
+	</div>
+</form>
+</tbody>
+</div>
+</body>

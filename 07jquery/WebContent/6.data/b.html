@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<script src = "http://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+	$(function({
+		var val = location.href.substr(
+			location.href.lastIndexOf('=')+1		
+		);
+		$(document.body).append(val);
+	});
+</script>

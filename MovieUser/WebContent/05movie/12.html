@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>태인이네 영화관</title>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../res/css/common.css">
+<script type="text/javascript" src="../res/js/common.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>	
+	<!-- sidebar -->
+	<div class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-right"  style="display:none; right:0" id="mySidebar">
+		<button class="w3-bar-item w3-button w3-large" onclick="w3_close()"> &times;</button>
+		<a href="#" class="w3-bar-item w3-button"><i class="fa fa-fw fa-home"></i><strong>태인이네영화관</strong></a><hr>
+	  
+		<button class="w3-button w3-block w3-left-align w3-indigo" onclick="myAccFunc()">> 영화관소개</button>
+		<div id="demoAcc" class="w3-hide w3-white w3-card">
+			<a href="../01home/01.html" class="w3-bar-item w3-button">· 영화관소개</a>
+			<a href="../01home/02.html" class="w3-bar-item w3-button">· 좌석배치도</a>
+			<a href="../01home/03.html" class="w3-bar-item w3-button">· 주차장안내</a>
+	    </div>
+	
+		<button class="w3-button w3-block w3-left-align w3-indigo" onclick="myAccFunc2()">> 영화정보</button>
+		<div id="demoAcc2" class="w3-hide w3-white w3-card">
+			<a href="../05movie/01.html" class="w3-bar-item w3-button">· 현재상영작</a>
+			<a href="../05movie/02.html" class="w3-bar-item w3-button">· 상영시간표</a>
+			<a href="../05movie/03.html" class="w3-bar-item w3-button">· 상영예정작</a>
+		</div>
+	  
+		<button class="w3-button w3-block w3-left-align w3-indigo" onclick="myAccFunc3()">> 영화예매</button>
+		<div id="demoAcc3" class="w3-hide w3-white w3-card">
+			<a href="../03reservation/01.html" class="w3-bar-item w3-button">· 예매하기</a>
+			<a href="../03reservation/02.html" class="w3-bar-item w3-button">· 예매내역</a>
+			<a href="../03reservation/03.html" class="w3-bar-item w3-button">· 위시리스트</a>
+		</div>
+	
+		<button class="w3-button w3-block w3-left-align w3-indigo" onclick="myAccFunc4()">> 리뷰관리</button>
+		<div id="demoAcc4" class="w3-hide w3-white w3-card">
+			<a href="../04review/01.html" class="w3-bar-item w3-button">· 리뷰조회</a>
+			<a href="../04review/02.html" class="w3-bar-item w3-button">· 리뷰등록</a>
+			<a href="../04review/03.html" class="w3-bar-item w3-button">· 리뷰수정</a>
+		</div>
+		
+		<div>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<p><center>Copyrightⓒ 2018 By Team Cinema.Co.Ltd. All right reserved.</center></p>
+		</div>
+	</div>
+	
+	<!-- logo image -->
+	<div class="w3-container"><br>
+	<a class = "navbar-img-logo" href = "../main.html"><img src = "../res/img/logo.png" width="150px"></a>
+	</div>
+	
+	<!-- top menu -->
+	<div class="w3-display-topright w3-text-black">
+    <br>
+    <p><a href = "../02users/03.html"><i class="fa fa-address-card-o"></i> 마이페이지</a>
+	   <a href = "../02users/02.html"><i class="fa fa-user"></i> 로그인</a>
+	   <a href = "../02users/01.html"><i class="fa fa-check-square-o"></i> 회원가입　　　　　</a></p>
+	</div>
+    
+    <button class="w3-button w3-white w3-xlarge w3-indigo w3-display-topright" onclick="w3_open()">&#9776;</button>
+    <br><br>
+     
+    <!-- navbar menu -->
+    <div class="container" style="width:100%">
+	<div class="w3-bar w3-indigo w3-padding-small w3-medium" style="max-width:100%;" >
+		<a href="../main.html" class="w3-bar-item w3-button w3-text-white">
+			<i class="fa fa-fw fa-home"></i>
+			<strong>태인이네영화관</strong>
+		</a>
+	    
+		<div class="w3-dropdown-hover">
+			<button class="w3-button"><a href="../01home/01.html" class="w3-text-white"/>영화관소개</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="../01home/01.html" class="w3-bar-item w3-button">영화관소개</a>
+				<a href="../01home/02.html" class="w3-bar-item w3-button">좌석배치도</a>
+				<a href="../01home/03.html" class="w3-bar-item w3-button">주차장안내</a>
+			</div>
+		</div>
+	    
+		<div class="w3-dropdown-hover">
+			<button class="w3-button"><a href="../05movie/01.html" class="w3-text-white"/>영화정보</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="../05movie/01.html" class="w3-bar-item w3-button">현재상영작</a>
+				<a href="../05movie/02.html" class="w3-bar-item w3-button">상영시간표</a>
+				<a href="../05movie/03.html" class="w3-bar-item w3-button">상영예정작</a>
+			</div>
+		</div>
+	    
+		<div class="w3-dropdown-hover">
+			<button class="w3-button"><a href="../03reservation/01.html" class="w3-text-white"/>영화관예매</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="../03reservation/01.html" class="w3-bar-item w3-button">예매하기</a>
+				<a href="../03reservation/02.html" class="w3-bar-item w3-button">예매내역</a>
+				<a href="../03reservation/03.html" class="w3-bar-item w3-button">위시리스트</a>
+			</div>
+		</div>
+	
+		<div class="w3-dropdown-hover">
+			<button class="w3-button"><a href="../04review/01.html" class="w3-text-white"/>리뷰관리</button>
+			<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="../04review/01.html" class="w3-bar-item w3-button">리뷰조회</a>
+				<a href="../04review/02.html" class="w3-bar-item w3-button">리뷰등록</a>
+				<a href="../04review/03.html" class="w3-bar-item w3-button">리뷰수정</a>
+			</div>
+		</div>
+		<a href="#" class="w3-bar-item w3-button w3-small w3-light-gray w3-right"><i class="glyphicon glyphicon-search"></i></a>
+        <input type="text" class="w3-bar-item w3-input w3-small w3-white w3-right w3-text-gray" placeholder="검색할 내용을 입력하세요.">
+	</div>
+	</div><br>
+
+	<!-- side menu -->
+	<div class="container" style="width:100%">
+    <br><br>
+    	<ul class="w3-ul w3-left" style="width:200px"><br>
+		<p class="w3-text-indigo w3-large"><b>　영화정보</b></p>
+			<li class="active">
+				<a href="../05movie/01.html">현재상영작 <i class="icon fa fa-angle-right" aria-hidden="true"></i></a>
+			</li>
+			<li class="">
+				<a href="../05movie/02.html">상영시간표	<i class="icon fa fa-angle-right" aria-hidden="true"></i></a>
+			</li>
+			<li class="">
+				<a href="../05movie/03.html">상영예정작 <i class="icon fa fa-angle-right" aria-hidden="true"></i></a>
+			</li>
+		</ul>
+    
+    <!-- 05movie content-->    
+    <h3><p><b> 　l 　영화 정보</b></p></h3>
+	
+	<div class="container" style="width:1300px">
+	<div class="w3-row-padding ">
+	<button type="button" class="btn btn-default" value="목록" ><a href="../05movie/03.html">목록</a></button>
+	<hr><br><br>
+		<div class="w3-col l3 m6 w3-margin-bottom" style="width:400px">
+			<img src="../res/img/09.jpg" alt="Fantastic Beasts: The Crimes of Grindelwald" style="width:380px">
+		</div>
+		<div class="w3-col l3 m6 " style="width:800px"> 
+			<p><h3><b>신비한 동물들과 그린델왈드의 법칙 　</b><small>Fantastic Beasts: The Crimes of Grindelwald, 2018</small></h3></p><br>
+		
+		<div class="panel panel-default faq-panel" >
+		<div class="panel-heading" role="tab" id="faq-item-113">
+			<h4 class="panel-title">
+				<a role="button" data-toggle="collapse"  href="#faq-item-113-body">
+				<center><b>영화 정보 및 예매</b></center></a>
+			</h4>
+		</div>
+			
+			<div class="panel-body" >
+				<p>
+				<strong>개요</strong>　모험, 가족, 판타지 | 미국, 영국 | 2018.11 개봉예정<br>
+				<strong>감독</strong>　데이빗 예이츠<br>
+				<strong>출연</strong>　에디 레드메인(뉴트 스캐맨더), 캐서린 워터스턴(티나 골드스틴), 앨리슨 수돌(퀴니 골드스틴)<br><br>
+				<strong>마법 세계의 운명을 건 전쟁이 시작된다!</strong><br><br>
+					 ‘뉴트 스캐맨더’(에디 레드메인)의 활약으로 <br>
+					 강력한 어둠의 마법사 ‘겔러트 그린델왈드’(조니 뎁)가 미합중국 마법의회 MACUSA에 붙잡히지만, <br>
+					 이내 그가 장담했던 대로 탈출해 추종자를 모으기 시작한다. <br>
+					 순혈 마법사의 세력을 모아 마법을 사용하지 않는 사람들을 지배하려는 <br>
+					 그린델왈드의 야욕을 막기 위해 ‘알버스 덤블도어’(주드 로)는 제자였던 뉴트에게 도움을 요청한다.<br> 
+					 마법사 사회는 점점 더 분열되어 가고, <br>
+					 뉴트는 앞날의 위험을 알지 못한 채 제안을 승낙하는데...<br>
+				</p>
+			</div>
+			</div>
+			<br>
+			<button class="w3-button w3-indigo w3-block w3-right"><b>예매하기</b></button>
+		</div>
+		</div>
+		</div><br><br><br>
+		<hr><br>
+		<div class="container" >
+		<h4><p><b> 　| 　영화 리뷰 　| </b></p></h4>
+		
+		<table class="w3-table w3-bordered"  style="width:90%">
+		<colgroup>
+			<col>
+			<col width="100">
+			<col width="100">
+			<col width="100">
+		</colgroup>
+		
+		<thead> 
+			<tr class="w3-light-gray">
+				<th class="w3-center" scope="col">제목</th>
+				<th class="w3-center" scope="col">작성자</th>
+				<th class="w3-center" scope="col">날짜</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr class="w3-hover-light-blue">
+				<td class="title">
+					<p><center>등록된 리뷰가 없습니다. </center></p>
+				</td>
+				<td class="name">　</td>
+				<td class="date">　</td>
+			</tr>
+		</tbody>
+		<br><br><br>
+		</table><br><br>
+		
+		<button type="button" class="btn btn-default" value="목록" ><a href="../05movie/03.html">목록</a></button>
+		<button type="button" class="btn btn-default" value="삭제하기" ><a href="../04review/02.html">리뷰쓰기</a></button>
+		<br>
+		<center><ul class="pagination">
+			<li><a href="#">1</a></li>
+		    <li><a href="#">2</a></li>
+		    <li><a href="#">3</a></li>
+		    <li><a href="#">4</a></li>
+		    <li><a href="#">5</a></li>
+		</ul></center>
+    </div>
+    </div>
+    
+</body>
+<footer><hr>	
+	<div class="w3-content w3-section" style="max-width:500px">
+		<img class="mySlidesB" src="../res/img/b01.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b02.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b03.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b04.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b05.jpg" style="width:100%">
+		<img class="mySlidesB" src="../res/img/b06.jpg" style="width:100%">
+	</div>
+</footer>
+<script>
+// banner
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlidesB");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+</html>

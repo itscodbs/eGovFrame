@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+
+div{
+	width : 200px;
+	height : auto;
+	margin : 10px 5px;
+	padding : 5px;
+	border : 1px solid black;
+}
+
+#cont1{
+	position : relative; /* static과의 차이 : left등의 속성 사용 가능 */
+	background : lightyellow;
+}
+
+#cont2{
+	position : relative;
+	left : 20px;
+	top : -20px;
+	background : lightgreen;
+}
+
+#cont3{
+	position : relative;
+	left : -30px;
+	top : 20px;
+	background : lightblue;
+}
